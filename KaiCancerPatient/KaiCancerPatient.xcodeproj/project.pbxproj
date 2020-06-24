@@ -7,8 +7,30 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		17102C1124A1AE5300B828F9 /* KCMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 17102C0F24A1AE5300B828F9 /* KCMainViewController.m */; };
+		17102C1224A1AE5300B828F9 /* KCMainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17102C1024A1AE5300B828F9 /* KCMainViewController.xib */; };
+		17102C1624A1AE6300B828F9 /* KCIMViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 17102C1424A1AE6300B828F9 /* KCIMViewController.m */; };
+		17102C1724A1AE6300B828F9 /* KCIMViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17102C1524A1AE6300B828F9 /* KCIMViewController.xib */; };
+		17102C1B24A1AE7100B828F9 /* KCAccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 17102C1924A1AE7100B828F9 /* KCAccountViewController.m */; };
+		17102C1C24A1AE7100B828F9 /* KCAccountViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17102C1A24A1AE7100B828F9 /* KCAccountViewController.xib */; };
+		17102C2024A1AE8400B828F9 /* KCNotificationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 17102C1E24A1AE8400B828F9 /* KCNotificationViewController.m */; };
+		17102C2124A1AE8400B828F9 /* KCNotificationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17102C1F24A1AE8400B828F9 /* KCNotificationViewController.xib */; };
+		17102C2524A1AE9300B828F9 /* KCEducationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 17102C2324A1AE9300B828F9 /* KCEducationViewController.m */; };
+		17102C2624A1AE9300B828F9 /* KCEducationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17102C2424A1AE9300B828F9 /* KCEducationViewController.xib */; };
+		17175FD824A0D5AD0067EF54 /* NSString+Hash.m in Sources */ = {isa = PBXBuildFile; fileRef = 17175FD724A0D5AD0067EF54 /* NSString+Hash.m */; };
+		17175FDB24A0D7960067EF54 /* NSDate+ZKDateTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 17175FDA24A0D7960067EF54 /* NSDate+ZKDateTools.m */; };
+		17175FDE24A0D81B0067EF54 /* EventCalender.m in Sources */ = {isa = PBXBuildFile; fileRef = 17175FDD24A0D81B0067EF54 /* EventCalender.m */; };
+		17175FE124A0D8620067EF54 /* NetWorkTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 17175FE024A0D8620067EF54 /* NetWorkTool.m */; };
+		17175FE424A0DA160067EF54 /* ZKDateTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 17175FE324A0DA160067EF54 /* ZKDateTools.m */; };
+		17175FE724A0E3830067EF54 /* ZKNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 17175FE624A0E3830067EF54 /* ZKNavigationViewController.m */; };
+		17175FEA24A0E3D50067EF54 /* ZKPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 17175FE924A0E3D50067EF54 /* ZKPageViewController.m */; };
+		17175FEF24A0EA2F0067EF54 /* KCLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 17175FED24A0EA2F0067EF54 /* KCLoginViewController.m */; };
+		17175FF024A0EA2F0067EF54 /* KCLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17175FEE24A0EA2F0067EF54 /* KCLoginViewController.xib */; };
+		175A9AA324A2F2840047207C /* CYLTabBarControllerConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 175A9AA224A2F2840047207C /* CYLTabBarControllerConfig.m */; };
+		17C62C5E2497B1DB0072617C /* UIButton+ZK.m in Sources */ = {isa = PBXBuildFile; fileRef = 17C62C5D2497B1DB0072617C /* UIButton+ZK.m */; };
+		17C62C632497B25E0072617C /* ZKButtonModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 17C62C622497B25E0072617C /* ZKButtonModel.m */; };
+		17C62C662497B2F40072617C /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 17C62C652497B2F40072617C /* UIView+Extension.m */; };
 		17CACFF6246A92DF00D4DB03 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 17CACFF5246A92DF00D4DB03 /* AppDelegate.m */; };
-		17CACFF9246A92DF00D4DB03 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 17CACFF8246A92DF00D4DB03 /* SceneDelegate.m */; };
 		17CACFFC246A92DF00D4DB03 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 17CACFFB246A92DF00D4DB03 /* ViewController.m */; };
 		17CACFFF246A92DF00D4DB03 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17CACFFD246A92DF00D4DB03 /* Main.storyboard */; };
 		17CAD001246A92E100D4DB03 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 17CAD000246A92E100D4DB03 /* Assets.xcassets */; };
@@ -16,6 +38,7 @@
 		17CAD007246A92E100D4DB03 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 17CAD006246A92E100D4DB03 /* main.m */; };
 		17CAD011246A92E100D4DB03 /* KaiCancerPatientTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 17CAD010246A92E100D4DB03 /* KaiCancerPatientTests.m */; };
 		17CAD01C246A92E100D4DB03 /* KaiCancerPatientUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 17CAD01B246A92E100D4DB03 /* KaiCancerPatientUITests.m */; };
+		FAC4C590E474E62623D433E9 /* libPods-KaiCancerPatient.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A3605FB149D3583A7E809D7D /* libPods-KaiCancerPatient.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,11 +59,50 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		17102C0E24A1AE5300B828F9 /* KCMainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KCMainViewController.h; sourceTree = "<group>"; };
+		17102C0F24A1AE5300B828F9 /* KCMainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KCMainViewController.m; sourceTree = "<group>"; };
+		17102C1024A1AE5300B828F9 /* KCMainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KCMainViewController.xib; sourceTree = "<group>"; };
+		17102C1324A1AE6300B828F9 /* KCIMViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KCIMViewController.h; sourceTree = "<group>"; };
+		17102C1424A1AE6300B828F9 /* KCIMViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KCIMViewController.m; sourceTree = "<group>"; };
+		17102C1524A1AE6300B828F9 /* KCIMViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KCIMViewController.xib; sourceTree = "<group>"; };
+		17102C1824A1AE7100B828F9 /* KCAccountViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KCAccountViewController.h; sourceTree = "<group>"; };
+		17102C1924A1AE7100B828F9 /* KCAccountViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KCAccountViewController.m; sourceTree = "<group>"; };
+		17102C1A24A1AE7100B828F9 /* KCAccountViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KCAccountViewController.xib; sourceTree = "<group>"; };
+		17102C1D24A1AE8400B828F9 /* KCNotificationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KCNotificationViewController.h; sourceTree = "<group>"; };
+		17102C1E24A1AE8400B828F9 /* KCNotificationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KCNotificationViewController.m; sourceTree = "<group>"; };
+		17102C1F24A1AE8400B828F9 /* KCNotificationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KCNotificationViewController.xib; sourceTree = "<group>"; };
+		17102C2224A1AE9300B828F9 /* KCEducationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KCEducationViewController.h; sourceTree = "<group>"; };
+		17102C2324A1AE9300B828F9 /* KCEducationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KCEducationViewController.m; sourceTree = "<group>"; };
+		17102C2424A1AE9300B828F9 /* KCEducationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KCEducationViewController.xib; sourceTree = "<group>"; };
+		17175FD624A0D5AD0067EF54 /* NSString+Hash.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+Hash.h"; sourceTree = "<group>"; };
+		17175FD724A0D5AD0067EF54 /* NSString+Hash.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+Hash.m"; sourceTree = "<group>"; };
+		17175FD924A0D7960067EF54 /* NSDate+ZKDateTools.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDate+ZKDateTools.h"; sourceTree = "<group>"; };
+		17175FDA24A0D7960067EF54 /* NSDate+ZKDateTools.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDate+ZKDateTools.m"; sourceTree = "<group>"; };
+		17175FDC24A0D81B0067EF54 /* EventCalender.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EventCalender.h; sourceTree = "<group>"; };
+		17175FDD24A0D81B0067EF54 /* EventCalender.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EventCalender.m; sourceTree = "<group>"; };
+		17175FDF24A0D8620067EF54 /* NetWorkTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetWorkTool.h; sourceTree = "<group>"; };
+		17175FE024A0D8620067EF54 /* NetWorkTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NetWorkTool.m; sourceTree = "<group>"; };
+		17175FE224A0DA160067EF54 /* ZKDateTools.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZKDateTools.h; sourceTree = "<group>"; };
+		17175FE324A0DA160067EF54 /* ZKDateTools.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZKDateTools.m; sourceTree = "<group>"; };
+		17175FE524A0E3830067EF54 /* ZKNavigationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZKNavigationViewController.h; sourceTree = "<group>"; };
+		17175FE624A0E3830067EF54 /* ZKNavigationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZKNavigationViewController.m; sourceTree = "<group>"; };
+		17175FE824A0E3D50067EF54 /* ZKPageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZKPageViewController.h; sourceTree = "<group>"; };
+		17175FE924A0E3D50067EF54 /* ZKPageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZKPageViewController.m; sourceTree = "<group>"; };
+		17175FEC24A0EA2F0067EF54 /* KCLoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KCLoginViewController.h; sourceTree = "<group>"; };
+		17175FED24A0EA2F0067EF54 /* KCLoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KCLoginViewController.m; sourceTree = "<group>"; };
+		17175FEE24A0EA2F0067EF54 /* KCLoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KCLoginViewController.xib; sourceTree = "<group>"; };
+		175A9AA124A2F2840047207C /* CYLTabBarControllerConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CYLTabBarControllerConfig.h; sourceTree = "<group>"; };
+		175A9AA224A2F2840047207C /* CYLTabBarControllerConfig.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CYLTabBarControllerConfig.m; sourceTree = "<group>"; };
+		17C62C5C2497B1DB0072617C /* UIButton+ZK.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIButton+ZK.h"; sourceTree = "<group>"; };
+		17C62C5D2497B1DB0072617C /* UIButton+ZK.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIButton+ZK.m"; sourceTree = "<group>"; };
+		17C62C612497B25E0072617C /* ZKButtonModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZKButtonModel.h; sourceTree = "<group>"; };
+		17C62C622497B25E0072617C /* ZKButtonModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZKButtonModel.m; sourceTree = "<group>"; };
+		17C62C642497B2F40072617C /* UIView+Extension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+Extension.h"; sourceTree = "<group>"; };
+		17C62C652497B2F40072617C /* UIView+Extension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
+		17C62C672497B3D80072617C /* ZKPrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZKPrefixHeader.pch; sourceTree = "<group>"; };
 		17CACFF1246A92DF00D4DB03 /* KaiCancerPatient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KaiCancerPatient.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		17CACFF4246A92DF00D4DB03 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		17CACFF5246A92DF00D4DB03 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		17CACFF7246A92DF00D4DB03 /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
-		17CACFF8246A92DF00D4DB03 /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
 		17CACFFA246A92DF00D4DB03 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		17CACFFB246A92DF00D4DB03 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		17CACFFE246A92DF00D4DB03 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -54,6 +116,9 @@
 		17CAD017246A92E100D4DB03 /* KaiCancerPatientUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KaiCancerPatientUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		17CAD01B246A92E100D4DB03 /* KaiCancerPatientUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KaiCancerPatientUITests.m; sourceTree = "<group>"; };
 		17CAD01D246A92E100D4DB03 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5B6EE0ED2B93BD523F2E112C /* Pods-KaiCancerPatient.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KaiCancerPatient.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KaiCancerPatient/Pods-KaiCancerPatient.debug.xcconfig"; sourceTree = "<group>"; };
+		A31EC6CDB94C9FA24D6FBDAC /* Pods-KaiCancerPatient.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KaiCancerPatient.release.xcconfig"; path = "Pods/Target Support Files/Pods-KaiCancerPatient/Pods-KaiCancerPatient.release.xcconfig"; sourceTree = "<group>"; };
+		A3605FB149D3583A7E809D7D /* libPods-KaiCancerPatient.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-KaiCancerPatient.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +126,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAC4C590E474E62623D433E9 /* libPods-KaiCancerPatient.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +147,170 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		17102C0924A1ACAF00B828F9 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				17102C0E24A1AE5300B828F9 /* KCMainViewController.h */,
+				17102C0F24A1AE5300B828F9 /* KCMainViewController.m */,
+				17102C1024A1AE5300B828F9 /* KCMainViewController.xib */,
+			);
+			name = Main;
+			sourceTree = "<group>";
+		};
+		17102C0A24A1ACBB00B828F9 /* IM */ = {
+			isa = PBXGroup;
+			children = (
+				17102C1324A1AE6300B828F9 /* KCIMViewController.h */,
+				17102C1424A1AE6300B828F9 /* KCIMViewController.m */,
+				17102C1524A1AE6300B828F9 /* KCIMViewController.xib */,
+			);
+			name = IM;
+			sourceTree = "<group>";
+		};
+		17102C0B24A1ACC600B828F9 /* Account */ = {
+			isa = PBXGroup;
+			children = (
+				17102C1824A1AE7100B828F9 /* KCAccountViewController.h */,
+				17102C1924A1AE7100B828F9 /* KCAccountViewController.m */,
+				17102C1A24A1AE7100B828F9 /* KCAccountViewController.xib */,
+			);
+			name = Account;
+			sourceTree = "<group>";
+		};
+		17102C0C24A1ACD700B828F9 /* Notification */ = {
+			isa = PBXGroup;
+			children = (
+				17102C1D24A1AE8400B828F9 /* KCNotificationViewController.h */,
+				17102C1E24A1AE8400B828F9 /* KCNotificationViewController.m */,
+				17102C1F24A1AE8400B828F9 /* KCNotificationViewController.xib */,
+			);
+			name = Notification;
+			sourceTree = "<group>";
+		};
+		17102C0D24A1AD1200B828F9 /* Education */ = {
+			isa = PBXGroup;
+			children = (
+				17102C2224A1AE9300B828F9 /* KCEducationViewController.h */,
+				17102C2324A1AE9300B828F9 /* KCEducationViewController.m */,
+				17102C2424A1AE9300B828F9 /* KCEducationViewController.xib */,
+			);
+			name = Education;
+			sourceTree = "<group>";
+		};
+		17175FEB24A0E9E60067EF54 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				17175FEC24A0EA2F0067EF54 /* KCLoginViewController.h */,
+				17175FED24A0EA2F0067EF54 /* KCLoginViewController.m */,
+				17175FEE24A0EA2F0067EF54 /* KCLoginViewController.xib */,
+			);
+			name = Login;
+			sourceTree = "<group>";
+		};
+		17C62C502497A68D0072617C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				17CAD000246A92E100D4DB03 /* Assets.xcassets */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		17C62C522497A6B90072617C /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				17102C0D24A1AD1200B828F9 /* Education */,
+				17102C0C24A1ACD700B828F9 /* Notification */,
+				17102C0B24A1ACC600B828F9 /* Account */,
+				17102C0A24A1ACBB00B828F9 /* IM */,
+				17102C0924A1ACAF00B828F9 /* Main */,
+				17175FEB24A0E9E60067EF54 /* Login */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		17C62C552497A7270072617C /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				17C62C5A2497A75D0072617C /* Categorys */,
+				17C62C592497A7540072617C /* launch */,
+				17C62C582497A74D0072617C /* header */,
+				17C62C572497A7410072617C /* Controller */,
+				17C62C562497A7340072617C /* Tools */,
+			);
+			name = Base;
+			sourceTree = "<group>";
+		};
+		17C62C562497A7340072617C /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				17175FDC24A0D81B0067EF54 /* EventCalender.h */,
+				17175FDD24A0D81B0067EF54 /* EventCalender.m */,
+				17175FDF24A0D8620067EF54 /* NetWorkTool.h */,
+				17175FE024A0D8620067EF54 /* NetWorkTool.m */,
+				17175FE224A0DA160067EF54 /* ZKDateTools.h */,
+				17175FE324A0DA160067EF54 /* ZKDateTools.m */,
+				175A9AA124A2F2840047207C /* CYLTabBarControllerConfig.h */,
+				175A9AA224A2F2840047207C /* CYLTabBarControllerConfig.m */,
+			);
+			name = Tools;
+			sourceTree = "<group>";
+		};
+		17C62C572497A7410072617C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				17175FE524A0E3830067EF54 /* ZKNavigationViewController.h */,
+				17175FE624A0E3830067EF54 /* ZKNavigationViewController.m */,
+				17175FE824A0E3D50067EF54 /* ZKPageViewController.h */,
+				17175FE924A0E3D50067EF54 /* ZKPageViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		17C62C582497A74D0072617C /* header */ = {
+			isa = PBXGroup;
+			children = (
+				17C62C672497B3D80072617C /* ZKPrefixHeader.pch */,
+			);
+			name = header;
+			sourceTree = "<group>";
+		};
+		17C62C592497A7540072617C /* launch */ = {
+			isa = PBXGroup;
+			children = (
+				17CAD002246A92E100D4DB03 /* LaunchScreen.storyboard */,
+			);
+			name = launch;
+			sourceTree = "<group>";
+		};
+		17C62C5A2497A75D0072617C /* Categorys */ = {
+			isa = PBXGroup;
+			children = (
+				17C62C5C2497B1DB0072617C /* UIButton+ZK.h */,
+				17C62C5D2497B1DB0072617C /* UIButton+ZK.m */,
+				17C62C612497B25E0072617C /* ZKButtonModel.h */,
+				17C62C622497B25E0072617C /* ZKButtonModel.m */,
+				17C62C642497B2F40072617C /* UIView+Extension.h */,
+				17C62C652497B2F40072617C /* UIView+Extension.m */,
+				17175FD624A0D5AD0067EF54 /* NSString+Hash.h */,
+				17175FD724A0D5AD0067EF54 /* NSString+Hash.m */,
+				17175FD924A0D7960067EF54 /* NSDate+ZKDateTools.h */,
+				17175FDA24A0D7960067EF54 /* NSDate+ZKDateTools.m */,
+			);
+			name = Categorys;
+			sourceTree = "<group>";
+		};
+		17C62C5B2497B0B60072617C /* AppCore */ = {
+			isa = PBXGroup;
+			children = (
+				17CAD006246A92E100D4DB03 /* main.m */,
+				17CAD005246A92E100D4DB03 /* Info.plist */,
+				17CACFFD246A92DF00D4DB03 /* Main.storyboard */,
+				17CACFF4246A92DF00D4DB03 /* AppDelegate.h */,
+				17CACFF5246A92DF00D4DB03 /* AppDelegate.m */,
+			);
+			name = AppCore;
+			sourceTree = "<group>";
+		};
 		17CACFE8246A92DF00D4DB03 = {
 			isa = PBXGroup;
 			children = (
@@ -88,6 +318,8 @@
 				17CAD00F246A92E100D4DB03 /* KaiCancerPatientTests */,
 				17CAD01A246A92E100D4DB03 /* KaiCancerPatientUITests */,
 				17CACFF2246A92DF00D4DB03 /* Products */,
+				5CC5FACF946FF1EBF570FE75 /* Pods */,
+				813908DF9A4C6012343DF5B1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -104,17 +336,12 @@
 		17CACFF3246A92DF00D4DB03 /* KaiCancerPatient */ = {
 			isa = PBXGroup;
 			children = (
-				17CACFF4246A92DF00D4DB03 /* AppDelegate.h */,
-				17CACFF5246A92DF00D4DB03 /* AppDelegate.m */,
-				17CACFF7246A92DF00D4DB03 /* SceneDelegate.h */,
-				17CACFF8246A92DF00D4DB03 /* SceneDelegate.m */,
+				17C62C5B2497B0B60072617C /* AppCore */,
+				17C62C552497A7270072617C /* Base */,
+				17C62C522497A6B90072617C /* Controllers */,
+				17C62C502497A68D0072617C /* Resources */,
 				17CACFFA246A92DF00D4DB03 /* ViewController.h */,
 				17CACFFB246A92DF00D4DB03 /* ViewController.m */,
-				17CACFFD246A92DF00D4DB03 /* Main.storyboard */,
-				17CAD000246A92E100D4DB03 /* Assets.xcassets */,
-				17CAD002246A92E100D4DB03 /* LaunchScreen.storyboard */,
-				17CAD005246A92E100D4DB03 /* Info.plist */,
-				17CAD006246A92E100D4DB03 /* main.m */,
 			);
 			path = KaiCancerPatient;
 			sourceTree = "<group>";
@@ -137,6 +364,23 @@
 			path = KaiCancerPatientUITests;
 			sourceTree = "<group>";
 		};
+		5CC5FACF946FF1EBF570FE75 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5B6EE0ED2B93BD523F2E112C /* Pods-KaiCancerPatient.debug.xcconfig */,
+				A31EC6CDB94C9FA24D6FBDAC /* Pods-KaiCancerPatient.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		813908DF9A4C6012343DF5B1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A3605FB149D3583A7E809D7D /* libPods-KaiCancerPatient.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -144,9 +388,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 17CAD020246A92E100D4DB03 /* Build configuration list for PBXNativeTarget "KaiCancerPatient" */;
 			buildPhases = (
+				3366BE59A4EAFA8E26A2050B /* [CP] Check Pods Manifest.lock */,
 				17CACFED246A92DF00D4DB03 /* Sources */,
 				17CACFEE246A92DF00D4DB03 /* Frameworks */,
 				17CACFEF246A92DF00D4DB03 /* Resources */,
+				3DFA2881E2AF3EC387393237 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -240,9 +486,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				17102C1724A1AE6300B828F9 /* KCIMViewController.xib in Resources */,
+				17102C1224A1AE5300B828F9 /* KCMainViewController.xib in Resources */,
+				17102C2624A1AE9300B828F9 /* KCEducationViewController.xib in Resources */,
+				17102C2124A1AE8400B828F9 /* KCNotificationViewController.xib in Resources */,
+				17175FF024A0EA2F0067EF54 /* KCLoginViewController.xib in Resources */,
 				17CAD004246A92E100D4DB03 /* LaunchScreen.storyboard in Resources */,
 				17CAD001246A92E100D4DB03 /* Assets.xcassets in Resources */,
 				17CACFFF246A92DF00D4DB03 /* Main.storyboard in Resources */,
+				17102C1C24A1AE7100B828F9 /* KCAccountViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -262,15 +514,72 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		3366BE59A4EAFA8E26A2050B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-KaiCancerPatient-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3DFA2881E2AF3EC387393237 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-KaiCancerPatient/Pods-KaiCancerPatient-resources.sh",
+				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
+				"${PODS_ROOT}/SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MJRefresh.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SVProgressHUD.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-KaiCancerPatient/Pods-KaiCancerPatient-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		17CACFED246A92DF00D4DB03 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				17102C1B24A1AE7100B828F9 /* KCAccountViewController.m in Sources */,
+				17175FE124A0D8620067EF54 /* NetWorkTool.m in Sources */,
+				17175FD824A0D5AD0067EF54 /* NSString+Hash.m in Sources */,
+				17102C1624A1AE6300B828F9 /* KCIMViewController.m in Sources */,
+				175A9AA324A2F2840047207C /* CYLTabBarControllerConfig.m in Sources */,
+				17102C1124A1AE5300B828F9 /* KCMainViewController.m in Sources */,
+				17175FE424A0DA160067EF54 /* ZKDateTools.m in Sources */,
+				17C62C662497B2F40072617C /* UIView+Extension.m in Sources */,
 				17CACFFC246A92DF00D4DB03 /* ViewController.m in Sources */,
+				17175FDE24A0D81B0067EF54 /* EventCalender.m in Sources */,
 				17CACFF6246A92DF00D4DB03 /* AppDelegate.m in Sources */,
+				17C62C5E2497B1DB0072617C /* UIButton+ZK.m in Sources */,
+				17175FDB24A0D7960067EF54 /* NSDate+ZKDateTools.m in Sources */,
 				17CAD007246A92E100D4DB03 /* main.m in Sources */,
-				17CACFF9246A92DF00D4DB03 /* SceneDelegate.m in Sources */,
+				17175FEF24A0EA2F0067EF54 /* KCLoginViewController.m in Sources */,
+				17102C2524A1AE9300B828F9 /* KCEducationViewController.m in Sources */,
+				17C62C632497B25E0072617C /* ZKButtonModel.m in Sources */,
+				17175FEA24A0E3D50067EF54 /* ZKPageViewController.m in Sources */,
+				17175FE724A0E3830067EF54 /* ZKNavigationViewController.m in Sources */,
+				17102C2024A1AE8400B828F9 /* KCNotificationViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -437,10 +746,12 @@
 		};
 		17CAD021246A92E100D4DB03 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5B6EE0ED2B93BD523F2E112C /* Pods-KaiCancerPatient.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3XQS9N4AVQ;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/KaiCancerPatient/ZKPrefixHeader.pch";
 				INFOPLIST_FILE = KaiCancerPatient/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -454,10 +765,12 @@
 		};
 		17CAD022246A92E100D4DB03 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A31EC6CDB94C9FA24D6FBDAC /* Pods-KaiCancerPatient.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3XQS9N4AVQ;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/KaiCancerPatient/ZKPrefixHeader.pch";
 				INFOPLIST_FILE = KaiCancerPatient/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-
+#import <AFNetworking.h>
 @interface ViewController ()
 
 @end
@@ -15,7 +15,9 @@
 @implementation ViewController
 
 - (void)viewDidLoad {
+    
     [super viewDidLoad];
+    NSLog(@"testVVVV!!");
     // Do any additional setup after loading the view.
 }
 
