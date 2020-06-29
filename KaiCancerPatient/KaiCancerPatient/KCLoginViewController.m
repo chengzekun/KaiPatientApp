@@ -7,8 +7,12 @@
 //
 
 #import "KCLoginViewController.h"
-
-@interface KCLoginViewController ()
+#import "PreLoginViewController.h"
+#import "passwordInViewController.h"
+@interface KCLoginViewController () <UITextFieldDelegate>
+@property (weak, nonatomic) IBOutlet UIButton *verifyCodeButton;
+@property (weak, nonatomic) IBOutlet UITextField *phoneNumberTextFeild;
+@property (weak, nonatomic) IBOutlet UILabel *wrongCodeLabel;
 
 @end
 
@@ -17,17 +21,40 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     NSLog(@"inLoginView");
-    // Do any additional setup after loading the view from its nib.
+    [self.wrongCodeLabel setTextColor:rgb(255, 72, 83)];
+    self.verifyCodeButton.backgroundColor = ZKBuleButtonColor;
+    self.verifyCodeButton.layer.cornerRadius = 10;
+    self.phoneNumberTextFeild.borderStyle = UITextBorderStyleNone;
+    
+    [self.verifyCodeButton addTarget:self action:@selector(verify) forControlEvents:UIControlEventTouchUpInside];
+    UIBarButtonItem *lbtnItem = [[UIBarButtonItem alloc] initWithTitle:@"返回" style:UIBarButtonItemStylePlain target:self action:@selector(goBack)];
+    self.navigationItem.leftBarButtonItem = lbtnItem;
+    UIBarButtonItem *rbtnItem = [[UIBarButtonItem alloc]  initWithTitle:@"密码登录" style:UIBarButtonItemStylePlain target:self action:@selector(passwordLogin)];
+    self.navigationItem.rightBarButtonItem = rbtnItem;
+    self.navigationController.navigationBar.barTintColor = [UIColor whiteColor];
+    [self.navigationController.navigationBar setShadowImage:[UIImage new]];
+    UITapGestureRecognizer *tapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(keyboardHide:)];
+    tapGestureRecognizer.cancelsTouchesInView = NO;
+    self.phoneNumberTextFeild.delegate = self;
+    [self.phoneNumberTextFeild setText:[[NSUserDefaults standardUserDefaults]objectForKey:@"PHONE"]];
+    
+    [self.view addGestureRecognizer:tapGestureRecognizer];
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+-(void)keyboardHide:(UITapGestureRecognizer*)tap{
+    [self.phoneNumberTextFeild resignFirstResponder];
 }
-*/
-
+-(void)goBack{
+    NSLog(@"To pre View");
+    PreLoginViewController* vc = [PreLoginViewController new];
+    [self.navigationController pushViewController:vc animated:YES];
+}
+-(void)passwordLogin{
+    NSLog(@"To passwordLogin View");
+    passwordInViewController* vc = [passwordInViewController new];
+    [self.navigationController pushViewController:vc animated:YES];
+}
+-(void)verify{
+    return;
+}
 @end

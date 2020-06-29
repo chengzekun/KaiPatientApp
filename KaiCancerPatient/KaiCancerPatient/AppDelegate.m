@@ -12,6 +12,7 @@
 #import "KCLoginViewController.h"
 #import <UserNotifications/UserNotifications.h>
 #import "KCLoginViewController.h"
+#import "PreLoginViewController.h"
 #import "CYLTabBarControllerConfig.h"
 
 
@@ -31,13 +32,13 @@
     
     [SVProgressHUD setMaximumDismissTimeInterval:2];
 //    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(changeRootViewController) name:@"CHANGE_ROOT_VIEWCONTROLLER" object:nil];
-//    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(changeRootViewControllerLogin) name:@"CHANGE_ROOT_VIEWCONTROLLER_LOGIN" object:nil];
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(changeRootLoginViewController) name:@"CHANGE_ROOT_VIEWCONTROLLER_LOGIN" object:nil];
 //    [SVProgressHUD setMaximumDismissTimeInterval:2];
     CYLTabBarControllerConfig *tabBarControllerConfig = [[CYLTabBarControllerConfig alloc] init];
     if([[NSUserDefaults standardUserDefaults] objectForKey:@"ACCESS_KEY"]){
         self.window.rootViewController = tabBarControllerConfig.tabBarController;
     }else{
-        KCLoginViewController *LoginVC = [[KCLoginViewController alloc] init];
+        PreLoginViewController *LoginVC = [[PreLoginViewController alloc] init];
         self.window.rootViewController = LoginVC;
     }
     return YES;
@@ -80,10 +81,6 @@
 //    self.window.rootViewController = tabBarVC;
 //}
 
-//-(void)changeRootViewControllerLogin{
-//    KCLoginViewController* vc = [KCLoginViewController new];
-//    self.window.rootViewController = vc;
-//}
 
 
 - (void)registerAPN {
@@ -123,4 +120,8 @@
     tab.selectedIndex = 0;
 }
 
+- (void)changeRootLoginViewController{
+    ZKNavigationViewController* vc = [[UINavigationController alloc]initWithRootViewController:[KCLoginViewController new]];
+    self.window.rootViewController = vc;
+}
 @end
