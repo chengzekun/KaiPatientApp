@@ -7,7 +7,7 @@
 //
 
 #import "KCResetPasswordViewController.h"
-
+//还没做resign处理
 @interface KCResetPasswordViewController ()<UITextFieldDelegate>
 @property (weak, nonatomic) IBOutlet UILabel *label;
 @property (strong, nonatomic) KCTextFeildTool *phoneNumber;
@@ -151,10 +151,18 @@
         make.bottom.mas_equalTo(self.view.mas_bottom).offset(-k_MagrinBottom+14));
         make.height.mas_equalTo(50);
     }];
+    UITapGestureRecognizer *tapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(keyboardHide:)];
+    tapGestureRecognizer.cancelsTouchesInView = NO;
+    [self.view addGestureRecognizer:tapGestureRecognizer];
 }
 
+-(void)keyboardHide:(UITapGestureRecognizer*)tap{
+    [self.phoneNumber resignFirstResponder];
+    [self.verifyCode resignFirstResponder];
+    [self.inputNewPassword resignFirstResponder];
+    [self.reInputNewPassword resignFirstResponder];
+}
 -(void)verifyCodeSend{
-    
     
     
     return;

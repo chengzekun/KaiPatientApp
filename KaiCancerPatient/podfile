@@ -1,0 +1,14 @@
+source 'https://github.com/CocoaPods/Specs.git'
+platform :ios,'9.0'
+
+target 'KaiCancerPatient' do
+    pod 'AFNetworking'
+    pod 'MJExtension'
+    pod 'SVProgressHUD'
+    pod 'SDWebImage'
+    pod 'MJRefresh'
+    pod 'Masonry'
+    pod 'DZNEmptyDataSet'
+    pod 'FDFullscreenPopGesture'
+    pod 'CYLTabBarController', '~> 1.24.0'
+end

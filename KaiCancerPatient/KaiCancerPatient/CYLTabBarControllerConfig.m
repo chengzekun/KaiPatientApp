@@ -18,22 +18,16 @@
 
 - (CYLTabBarController *)tabBarController {
     if (_tabBarController == nil) {
-        
         ZKNavigationViewController *nav1 = [[ZKNavigationViewController alloc] initWithRootViewController:[KCMainViewController new]];
         ZKNavigationViewController *nav2 = [[ZKNavigationViewController alloc] initWithRootViewController:[KCEducationViewController new]];
         ZKNavigationViewController *nav3 = [[ZKNavigationViewController alloc] initWithRootViewController:[KCIMViewController new]];
         ZKNavigationViewController *nav4 = [[ZKNavigationViewController alloc] initWithRootViewController:[KCNotificationViewController new]];
         ZKNavigationViewController *nav5 = [[ZKNavigationViewController alloc] initWithRootViewController:[KCAccountViewController new]];
-          
-          
         NSArray * tabBarItemsAttributes = [self tabBarItemsAttributes];
         NSArray * viewControllers = @[nav1,nav2,nav3,nav4,nav5];
-          
         CYLTabBarController * tabBarController = [[CYLTabBarController alloc] init];
-          
         tabBarController.tabBarItemsAttributes = tabBarItemsAttributes;
         tabBarController.viewControllers = viewControllers;
-          
         _tabBarController = tabBarController;
           
     }
@@ -44,22 +38,27 @@
   
 - (NSArray *)tabBarItemsAttributes {
     NSDictionary *dict1 = @{
+                            CYLTabBarItemTitle : @"首页",
                             CYLTabBarItemImage : @"Notification_nomal",
                             CYLTabBarItemSelectedImage : @"Notification_selected",
                             };
     NSDictionary *dict2 = @{
+                            CYLTabBarItemTitle : @"科普教育",
                             CYLTabBarItemImage : @"Class_nomal",
                             CYLTabBarItemSelectedImage : @"Class_selected",
                             };
     NSDictionary *dict3 = @{
+                            CYLTabBarItemTitle : @"在线咨询",
                             CYLTabBarItemImage : @"Account_nomal",
                             CYLTabBarItemSelectedImage : @"Account_selected",
                             };
     NSDictionary *dict4 = @{
+                            CYLTabBarItemTitle : @"消息",
                             CYLTabBarItemImage : @"Account_nomal",
                             CYLTabBarItemSelectedImage : @"Account_selected",
                             };
     NSDictionary *dict5 = @{
+                            CYLTabBarItemTitle : @"个人",
                             CYLTabBarItemImage : @"Account_nomal",
                             CYLTabBarItemSelectedImage : @"Account_selected",
                             };
@@ -99,8 +98,6 @@
       
     // set the bar background color
     // 设置背景图片
-    // UITabBar *tabBarAppearance = [UITabBar appearance];
-    // [tabBarAppearance setBackgroundImage:[UIImage imageNamed:@"tabbar_background_ios7"]];
 }
   
 + (UIImage *)imageFromColor:(UIColor *)color forSize:(CGSize)size withCornerRadius:(CGFloat)radius {

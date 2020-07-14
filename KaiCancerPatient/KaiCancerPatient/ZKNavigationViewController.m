@@ -21,10 +21,11 @@
     UINavigationBar * navigationBar = [UINavigationBar appearance];
     navigationBar.backIndicatorImage = backImage;
     navigationBar.backIndicatorTransitionMaskImage = backImage;
-    navigationBar.barTintColor = rgb(0,255,255);
+    navigationBar.barTintColor = UIColor.whiteColor;
     navigationBar.translucent = NO;
     navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName:rgb(245, 166, 35)};
     [[UIBarButtonItem appearance] setBackButtonTitlePositionAdjustment:UIOffsetMake(-Main_Screen_Width, 0) forBarMetrics:UIBarMetricsDefault];
+    [self.navigationBar setShadowImage:[UIImage new]];
 
 }
 

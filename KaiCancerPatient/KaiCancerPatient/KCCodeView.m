@@ -61,7 +61,7 @@
     
     [self addSubview:textField];
     self.textField = textField;
-    
+    NSLog(@"inConfig");
     // 小技巧：通过textField上层覆盖一个maskView，可以去掉textField的长按事件
     UIButton *maskView = [UIButton new];
     maskView.backgroundColor = [UIColor whiteColor];
@@ -73,8 +73,8 @@
     {
         KCCodeLabel *label = [KCCodeLabel new];
         label.textAlignment = NSTextAlignmentCenter;
-        label.textColor = [UIColor darkTextColor];
-        label.font = [UIFont fontWithName:@"KCCodeViewFangSC-Regular" size:41.5];
+        label.textColor = [UIColor blackColor];
+        label.font = [UIFont fontWithName:@"PingFangSC-Medium" size:48];
         [self addSubview:label];
         [self.labels addObject:label];
     }
@@ -82,7 +82,7 @@
     for (NSInteger i = 0; i < self.itemCount; i++)
     {
         UIView *line = [UIView new];
-        line.backgroundColor = [UIColor purpleColor];
+        line.backgroundColor = [UIColor grayColor];
         [self addSubview:line];
         [self.lines addObject:line];
     }
@@ -117,6 +117,7 @@
 #pragma mark - 编辑改变
 - (void)tfEditingChanged:(UITextField *)textField
 {
+    NSLog(@"tfEditingChanged");
     if (textField.text.length > self.itemCount) {
         textField.text = [textField.text substringWithRange:NSMakeRange(0, self.itemCount)];
     }
@@ -176,13 +177,6 @@
 
 @end
 
-
-
-// ------------------------------------------------------------------------
-// -----------------------------KCCodeLabel------------------------------
-// ------------------------------------------------------------------------
-
-
 @implementation KCCodeLabel
 
 - (instancetype)initWithFrame:(CGRect)frame
@@ -207,7 +201,7 @@
 - (void)setupView
 {
     UIView *cursorView = [[UIView alloc] init];
-    cursorView.backgroundColor = [UIColor blueColor];
+    cursorView.backgroundColor = [UIColor blackColor];
     cursorView.alpha = 0;
     [self addSubview:cursorView];
     _cursorView = cursorView;

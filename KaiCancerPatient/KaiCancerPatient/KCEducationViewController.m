@@ -7,26 +7,52 @@
 //
 
 #import "KCEducationViewController.h"
-
 @interface KCEducationViewController ()
-
+//<UITableViewDelegate,UITableViewDataSource,UIScrollViewDelegate>
+@property (weak, nonatomic) IBOutlet UIView *cancerIntroView;
+@property (weak, nonatomic) IBOutlet UIView *careIntroView;
+@property (weak, nonatomic) IBOutlet UIView *recureIntroView;
+@property (weak, nonatomic) IBOutlet UIView *sectionView;
 @end
 
 @implementation KCEducationViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    
+//    UIScrollView* scrollView = [[UIScrollView alloc] initWithFrame:self.view.frame];
+//    scrollView.delegate = self;
+//    [scrollView addSubview:self.sectionView];
+//    [self.view addSubview:scrollView];
+//    [self.view addSubview:self.articleTableView];
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+//-(UITableView*)articleTableView{
+//    if(_modelArray == nil){
+//        _articleTableView = [[UITableView alloc] init];
+//        _articleTableView.delegate = self;
+//        _articleTableView.dataSource =self;
+//    }
+//    return _articleTableView;
+//}
+//
+//- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+//    return 0;
+//}
+//
+//- (nullable NSIndexPath *)tableView:(UITableView *)tableView willSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+//    return nil;
+//}
+//- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+//    return 2;;
+//}
+//
+//- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+//    return nil;;
+//}
+//
+//-(void)refreshData{
+//    return;
+//}
 
 @end

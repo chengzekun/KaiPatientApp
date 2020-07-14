@@ -8,25 +8,22 @@
 
 #import "KCAccountViewController.h"
 
-@interface KCAccountViewController ()
+@interface KCAccountViewController ()<UIScrollViewDelegate>
 
 @end
 
 @implementation KCAccountViewController
+- (IBAction)click:(id)sender {
+    NSLog(@"编辑！！！！");
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+-(void)editDetail{
+    NSLog(@"To detail View");
 }
-*/
-
+-(void)callSheet{
+    
+}
 @end
