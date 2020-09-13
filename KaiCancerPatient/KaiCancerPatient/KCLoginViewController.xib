@@ -21,13 +21,13 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="登录" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wdW-lz-2ZD">
-                    <rect key="frame" x="16" y="118" width="382" height="41"/>
+                    <rect key="frame" x="16" y="84" width="382" height="41"/>
                     <fontDescription key="fontDescription" type="system" weight="medium" pointSize="34"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="输入手机号" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dMW-wN-wFW" customClass="KCTextFeildTool">
-                    <rect key="frame" x="16" y="297" width="382" height="40"/>
+                    <rect key="frame" x="16" y="263" width="382" height="40"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="40" id="Ksc-Tc-oqa"/>
                     </constraints>
@@ -35,7 +35,7 @@
                     <textInputTraits key="textInputTraits" keyboardType="numberPad" textContentType="tel"/>
                 </textField>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="手机号码格式不正确" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GBX-xw-eSO">
-                    <rect key="frame" x="16" y="347" width="120" height="18"/>
+                    <rect key="frame" x="16" y="313" width="120" height="18"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="120" id="Nxx-3a-JH1"/>
                         <constraint firstAttribute="height" constant="18" id="g27-K5-0iC"/>
@@ -45,7 +45,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aXE-0t-5MT">
-                    <rect key="frame" x="16" y="402" width="382" height="50"/>
+                    <rect key="frame" x="16" y="368" width="382" height="50"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="50" id="nWX-Zm-qcc"/>
                     </constraints>
@@ -73,12 +73,12 @@
                 <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="gZs-uf-pVg" secondAttribute="trailing" constant="16" id="HDW-Jg-AM6"/>
                 <constraint firstItem="Q5M-cg-NOt" firstAttribute="bottom" secondItem="gZs-uf-pVg" secondAttribute="bottom" constant="30" id="LYS-Qh-APx"/>
                 <constraint firstItem="wdW-lz-2ZD" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="16" id="MYD-ty-n7o"/>
-                <constraint firstItem="wdW-lz-2ZD" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" constant="74" id="Mh7-Qe-Lo1"/>
                 <constraint firstItem="dMW-wN-wFW" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="16" id="NMR-b5-sGc"/>
                 <constraint firstItem="aXE-0t-5MT" firstAttribute="top" secondItem="GBX-xw-eSO" secondAttribute="bottom" constant="37" id="QuM-z6-nl0"/>
                 <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="wdW-lz-2ZD" secondAttribute="trailing" constant="16" id="h3M-pc-GNO"/>
                 <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="dMW-wN-wFW" secondAttribute="trailing" constant="16" id="qJy-c8-ie0"/>
                 <constraint firstItem="GBX-xw-eSO" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="16" id="qxc-HP-1JR"/>
+                <constraint firstItem="wdW-lz-2ZD" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" constant="40" id="wCf-4I-3AM"/>
                 <constraint firstItem="aXE-0t-5MT" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="16" id="yNY-wi-iPs"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>

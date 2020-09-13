@@ -16,13 +16,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-//    self.PushButton.frame = CGRectMake(0, 0, 0, 50);
-//    self.PushButton.backgroundColor = rgba(254, 246, 216, 1);
-//    [self.PushButton mas_makeConstraints:^(MASConstraintMaker *make) {
-//        make.left.equalTo(self.view.mas_left).offset(16);
-//        make.right.equalTo(self.view.mas_right).offset(-16);
-//        make.bottom.equalTo(self.view).offset(-34);
-//    }];
     self.PushButton.backgroundColor = ZKBuleButtonColor;
     self.PushButton.layer.cornerRadius = 10;
 }

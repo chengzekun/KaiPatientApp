@@ -18,6 +18,8 @@
 
 - (void)awakeFromNib {
     [super awakeFromNib];
+//    [self setBackgroundColor:UIColor.blackColor];
+    
     UIGraphicsBeginImageContextWithOptions(_avator.bounds.size, NO, 0.0);
     //使用贝塞尔曲线画出一个圆形图
     [[UIBezierPath bezierPathWithRoundedRect:_avator.bounds cornerRadius:_avator.frame.size.width] addClip];
@@ -25,8 +27,16 @@
     _avator.image = UIGraphicsGetImageFromCurrentImageContext();
      //结束画图
     UIGraphicsEndImageContext();
-}
+    self.emergency.layer.cornerRadius = 9.5;
+    self.emergency.layer.masksToBounds = YES;
 
+}
+-(void)updateWithName:(NSString*)name avater:(NSString*)avater message:(NSString*)message emergency:(BOOL)isEmergency lastTime:(NSString*)time{
+    self.nameLabel.text = name;
+    self.message.text = message;
+    self.emergency.hidden = isEmergency;
+    self.lastTime.text = time;
+}
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
 

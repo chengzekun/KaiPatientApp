@@ -7,7 +7,6 @@
 //
 
 #import "AFHTTPSessionManager.h"
-//之前重命名了一下 不知道编译的时候有没有影响
 @interface NetWorkTool : AFHTTPSessionManager
 + (instancetype)sharedInstance;
 
@@ -42,6 +41,9 @@
      progressBlock:(void(^)(CGFloat progress))progressBlock
       successBlock:(void (^)(id data))successBlock
         errorBlock:(void (^)(NSString *errorDesc))errorBlock;
++ (NSDictionary *)dictionaryWithJsonString:(NSString *)jsonString;
+
+
 
 @end
 

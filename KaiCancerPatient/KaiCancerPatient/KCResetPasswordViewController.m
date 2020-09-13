@@ -26,6 +26,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.navigationController.navigationBar.hidden = NO;
+    UIBarButtonItem* litem = [[UIBarButtonItem alloc] initWithTitle:@"返回" style:UIBarButtonSystemItemCancel target:self action:@selector(quit)];
+    self.navigationItem.leftBarButtonItem = litem;
     
     self.phoneNumber = [[KCTextFeildTool alloc]init];
     [self.phoneNumber setFont:[UIFont fontWithName:@"PingFangSC-Medium" size:17]];
@@ -163,15 +166,12 @@
     [self.reInputNewPassword resignFirstResponder];
 }
 -(void)verifyCodeSend{
-    
-    
     return;
 }
 -(void)verifyReset{
-    
-    
-    
-    
     return;
+}
+-(void)quit{
+    [self.navigationController popViewControllerAnimated:YES];
 }
 @end

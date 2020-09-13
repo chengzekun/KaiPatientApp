@@ -26,18 +26,14 @@
 
 @end
 
-
-
 @implementation KCCodeView
 
 #pragma mark - 初始化
 - (instancetype)initWithCount:(NSInteger)count margin:(CGFloat)margin
 {
     if (self = [super init]) {
-        
         self.itemCount = count;
         self.itemMargin = margin;
-        
         [self configTextField];
     }
     return self;
@@ -54,11 +50,9 @@
     textField.autocapitalizationType = UITextAutocapitalizationTypeNone;
     textField.keyboardType = UIKeyboardTypeNumberPad;
     [textField addTarget:self action:@selector(tfEditingChanged:) forControlEvents:(UIControlEventEditingChanged)];
-    
     // 小技巧：这个属性为YES，可以强制使用系统的数字键盘，缺点是重新输入时，会清空之前的内容
     // clearsOnBeginEditing 属性并不适用于 secureTextEntry = YES 时
-    // textField.secureTextEntry = YES;
-    
+     textField.secureTextEntry = YES;
     [self addSubview:textField];
     self.textField = textField;
     NSLog(@"inConfig");
@@ -68,17 +62,15 @@
     [maskView addTarget:self action:@selector(clickMaskView) forControlEvents:(UIControlEventTouchUpInside)];
     [self addSubview:maskView];
     self.maskView = maskView;
-    
     for (NSInteger i = 0; i < self.itemCount; i++)
     {
         KCCodeLabel *label = [KCCodeLabel new];
         label.textAlignment = NSTextAlignmentCenter;
         label.textColor = [UIColor blackColor];
-        label.font = [UIFont fontWithName:@"PingFangSC-Medium" size:48];
+        label.font = [UIFont fontWithName:@"PingFangSC-Medium" size:36];
         [self addSubview:label];
         [self.labels addObject:label];
     }
-    
     for (NSInteger i = 0; i < self.itemCount; i++)
     {
         UIView *line = [UIView new];
@@ -92,24 +84,18 @@
 - (void)layoutSubviews
 {
     [super layoutSubviews];
-    
     if (self.labels.count != self.itemCount) return;
-    
     CGFloat temp = self.bounds.size.width - (self.itemMargin * (self.itemCount - 1));
     CGFloat w = temp / self.itemCount;
     CGFloat x = 0;
-    
     for (NSInteger i = 0; i < self.labels.count; i++)
     {
         x = i * (w + self.itemMargin);
-        
         UILabel *label = self.labels[i];
         label.frame = CGRectMake(x, 0, w, self.bounds.size.height);
-        
         UIView *line = self.lines[i];
         line.frame = CGRectMake(x, self.bounds.size.height - 1, w, 1);
     }
-    
     self.textField.frame = self.bounds;
     self.maskView.frame = self.bounds;
 }
@@ -121,7 +107,6 @@
     if (textField.text.length > self.itemCount) {
         textField.text = [textField.text substringWithRange:NSMakeRange(0, self.itemCount)];
     }
-    
     for (int i = 0; i < self.itemCount; i++)
     {
         UILabel *label = [self.labels objectAtIndex:i];
@@ -132,10 +117,8 @@
             label.text = nil;
         }
     }
-    
     [self cursor];
-    
-    // 输入完毕后，自动隐藏键盘
+//     输入完毕后，自动隐藏键盘
     if (textField.text.length >= self.itemCount) {
         [self.currentLabel stopAnimating];
         [textField resignFirstResponder];
@@ -159,13 +142,10 @@
 - (void)cursor
 {
     [self.currentLabel stopAnimating];
-    
     NSInteger index = self.code.length;
     if (index < 0) index = 0;
     if (index >= self.labels.count) index = self.labels.count - 1;
-    
     KCCodeLabel *label = [self.labels objectAtIndex:index];
-    
     [label startAnimating];
     self.currentLabel = label;
 }
@@ -174,11 +154,9 @@
 {
     return self.textField.text;
 }
-
 @end
 
 @implementation KCCodeLabel
-
 - (instancetype)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
@@ -222,7 +200,6 @@
 - (void)startAnimating
 {
     if (self.text.length > 0) return;
-    
     CABasicAnimation *oa = [CABasicAnimation animationWithKeyPath:@"opacity"];
     oa.fromValue = [NSNumber numberWithFloat:0];
     oa.toValue = [NSNumber numberWithFloat:1];

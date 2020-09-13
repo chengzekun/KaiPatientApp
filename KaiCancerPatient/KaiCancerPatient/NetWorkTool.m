@@ -158,14 +158,13 @@
         baseUrl = [NSURL URLWithString:netWorkDict[@"BackendApiHost"]];
         
         NSURLSessionConfiguration *config = [NSURLSessionConfiguration defaultSessionConfiguration];
-        config.timeoutIntervalForRequest = 10.0;
+        config.timeoutIntervalForRequest = 15.0;
         instance = [[self alloc]initWithBaseURL:baseUrl sessionConfiguration:config];
-        
-        instance.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json",@"text/html",@"text/json",@"text/javascript", nil];
-        [instance.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
-        [instance.requestSerializer setValue:[[NSUserDefaults standardUserDefaults]objectForKey:@"ACCESS_KEY"] forHTTPHeaderField:@"Authorization"];
-//        instance.responseSerializer = [AFHTTPResponseSerializer serializer];
 //        instance.requestSerializer = [AFJSONRequestSerializer serializer];
+        instance.responseSerializer = [AFJSONResponseSerializer serializer];
+        [instance.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
+//        [instance.requestSerializer setValue:[[NSUserDefaults standardUserDefaults]objectForKey:@"ACCESS_KEY"] forHTTPHeaderField:@"Authorization"];
+        instance.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json",@"text/html",@"text/json",@"text/javascript",@"text/html", nil];
         instance.retryRequestTable = [NSMutableDictionary dictionary];
         AFSecurityPolicy *securityPolicy = [AFSecurityPolicy defaultPolicy];
         //allowInvalidCertificates 是否允许无效证书（也就是自建的证书），默认为NO
@@ -178,13 +177,30 @@
         [instance addObserver];
         
     });
-    
     return instance;
-    
 }
 
 + (BOOL)isNetWorkReachable {
     return [[NetWorkTool sharedInstance]isNetWorkReachable];
+}
+
++ (NSDictionary *)dictionaryWithJsonString:(NSString *)jsonString
+{
+    if (jsonString == nil) {
+        return nil;
+    }
+
+    NSData *jsonData = [jsonString dataUsingEncoding:NSUTF8StringEncoding];
+    NSError *err;
+    NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:jsonData
+                                                        options:NSJSONReadingMutableContainers
+                                                          error:&err];
+    if(err)
+    {
+        NSLog(@"json解析失败：%@",err);
+        return nil;
+    }
+    return dic;
 }
 
 - (void)retryGETRequestWithRetryCount:(NSInteger )count
@@ -274,25 +290,16 @@
     
     action = [action stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
     [[NetWorkTool sharedInstance]POST:action parameters:parameter headers:NULL progress:^(NSProgress * _Nonnull uploadProgress) {
-        
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         responseObject = [NSJSONSerialization JSONObjectWithData:responseObject options:0 error:nil];
-        //        NSLog(@"%@",responseObject);
+//                NSLog(@"%@",responseObject);
         successBlock(nil);
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         errorBlock(error.localizedDescription);
         //        NSLog(@"%@",error.localizedDescription);
     }];
     
-//    [[NetWorkTool sharedInstance]POST:action parameters:parameter progress:^(NSProgress * _Nonnull uploadProgress) {
-//    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-//        responseObject = [NSJSONSerialization JSONObjectWithData:responseObject options:0 error:nil];
-//        //        NSLog(@"%@",responseObject);
-//        successBlock(nil);
-//    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-//        errorBlock(error.localizedDescription);
-//        //        NSLog(@"%@",error.localizedDescription);
-//    }];
+
     
 }
 + (void)POSTAction:(NSString *)LoginAction
@@ -300,7 +307,6 @@
      progressBlock:(void(^)(CGFloat progress))progressBlock
       successBlock:(void (^)(id data))successBlock
         errorBlock:(void (^)(NSString *errorDesc))errorBlock{
-    
     [[NetWorkTool sharedInstance]POST:LoginAction parameters:NULL headers:NULL constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
         [formData appendPartWithFormData:parameter[@"username"] name:@"username"];
         [formData appendPartWithFormData:parameter[@"password"] name:@"password"];
@@ -313,22 +319,6 @@
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         errorBlock(error.localizedDescription);
     }];
-    
-//    [[NetWorkTool sharedInstance] POST:LoginAction parameters:NULL constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
-//        [formData appendPartWithFormData:parameter[@"username"] name:@"username"];
-//        [formData appendPartWithFormData:parameter[@"password"] name:@"password"];
-//    } progress:^(NSProgress * _Nonnull uploadProgress) {
-//        if(progressBlock){
-//            progressBlock(uploadProgress.completedUnitCount/uploadProgress.totalUnitCount);
-//        }
-//    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-//        responseObject = [NSJSONSerialization JSONObjectWithData:responseObject options:0 error:nil];
-//    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-//        errorBlock(error.localizedDescription);
-//    }];
-    
-    
-    
 }
 
 + (void)POSTAction:(NSString *)action
@@ -453,4 +443,6 @@
             errorBlock(error.localizedDescription);
         }}];
 }
+
+
 @end

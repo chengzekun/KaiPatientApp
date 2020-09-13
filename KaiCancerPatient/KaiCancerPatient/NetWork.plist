@@ -3,6 +3,6 @@
 <plist version="1.0">
 <dict>
 	<key>BackendApiHost</key>
-	<string>https://sfp.dev.hins.work/api</string>
+	<string>http://sfp.dev.hins.work/api</string>
 </dict>
 </plist>

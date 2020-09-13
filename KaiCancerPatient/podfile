@@ -11,4 +11,5 @@ target 'KaiCancerPatient' do
     pod 'DZNEmptyDataSet'
     pod 'FDFullscreenPopGesture'
     pod 'CYLTabBarController', '~> 1.24.0'
+    pod 'ActionSheetPicker-3.0'
 end

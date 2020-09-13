@@ -11,7 +11,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface KCIMTableViewCell : UITableViewCell
-
+-(void)updateWithName:(NSString*)name avater:(NSString*)avater message:(NSString*)message emergency:(BOOL)isEmergency lastTime:(NSString*)time;
 @end
 
 NS_ASSUME_NONNULL_END

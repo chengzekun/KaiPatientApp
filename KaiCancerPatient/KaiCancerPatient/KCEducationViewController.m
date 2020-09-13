@@ -18,6 +18,7 @@
 @implementation KCEducationViewController
 
 - (void)viewDidLoad {
+    self.navigationController.navigationBar.hidden = YES;
     [super viewDidLoad];
     
 //    UIScrollView* scrollView = [[UIScrollView alloc] initWithFrame:self.view.frame];

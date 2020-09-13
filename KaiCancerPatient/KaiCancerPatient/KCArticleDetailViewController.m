@@ -19,6 +19,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+        self.navigationController.navigationBar.hidden = YES;
 }
 
 -(instancetype)initWithModel:(KCArticleModel*) model{

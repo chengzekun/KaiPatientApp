@@ -16,17 +16,16 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    UIImage *backImage = [UIImage imageNamed:@"Account_nomal"];
-    backImage = [backImage imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+//    UIImage *backImage = [UIImage imageNamed:@"Account_nomal"];
+//    backImage = [backImage imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     UINavigationBar * navigationBar = [UINavigationBar appearance];
-    navigationBar.backIndicatorImage = backImage;
-    navigationBar.backIndicatorTransitionMaskImage = backImage;
+//    navigationBar.backIndicatorImage = backImage;
+//    navigationBar.backIndicatorTransitionMaskImage = backImage;
     navigationBar.barTintColor = UIColor.whiteColor;
     navigationBar.translucent = NO;
     navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName:rgb(245, 166, 35)};
     [[UIBarButtonItem appearance] setBackButtonTitlePositionAdjustment:UIOffsetMake(-Main_Screen_Width, 0) forBarMetrics:UIBarMetricsDefault];
     [self.navigationBar setShadowImage:[UIImage new]];
-
 }
 
 - (UIStatusBarStyle)preferredStatusBarStyle {
@@ -35,7 +34,6 @@
 
 - (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated
 {
-    
     if (self.childViewControllers.count > 0) {
         [viewController setHidesBottomBarWhenPushed:YES];
     }
@@ -46,7 +44,7 @@
     if (previousViewControllerIndex >= 0) {
         previous = [viewControllerArray objectAtIndex:previousViewControllerIndex];
         previous.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc]
-                                                     initWithTitle:@""
+                                                     initWithTitle:@"取消"
                                                      style:UIBarButtonItemStylePlain
                                                      target:self
                                                      action:nil];

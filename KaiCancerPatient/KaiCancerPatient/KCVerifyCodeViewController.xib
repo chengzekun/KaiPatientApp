@@ -19,7 +19,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="登录" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RaI-ae-UJc">
-                    <rect key="frame" x="16" y="118" width="382" height="41"/>
+                    <rect key="frame" x="16" y="84" width="382" height="41"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="41" id="VtH-PU-qMr"/>
                     </constraints>
@@ -30,7 +30,7 @@
             </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
             <constraints>
-                <constraint firstItem="RaI-ae-UJc" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" constant="74" id="7Va-EA-4I5"/>
+                <constraint firstItem="RaI-ae-UJc" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" constant="40" id="7Va-EA-4I5"/>
                 <constraint firstItem="RaI-ae-UJc" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="16" id="R0Z-Lg-9fL"/>
                 <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="RaI-ae-UJc" secondAttribute="trailing" constant="16" id="yt6-QQ-wWV"/>
             </constraints>

@@ -1,4 +1,5 @@
 PODS:
+  - ActionSheetPicker-3.0 (2.5.0)
   - AFNetworking (4.0.1):
     - AFNetworking/NSURLSession (= 4.0.1)
     - AFNetworking/Reachability (= 4.0.1)
@@ -28,6 +29,7 @@ PODS:
   - SVProgressHUD (2.2.5)
 
 DEPENDENCIES:
+  - ActionSheetPicker-3.0
   - AFNetworking
   - CYLTabBarController (~> 1.24.0)
   - DZNEmptyDataSet
@@ -40,6 +42,7 @@ DEPENDENCIES:
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - ActionSheetPicker-3.0
     - AFNetworking
     - CYLTabBarController
     - DZNEmptyDataSet
@@ -51,6 +54,7 @@ SPEC REPOS:
     - SVProgressHUD
 
 SPEC CHECKSUMS:
+  ActionSheetPicker-3.0: 6d79f6f3b98e2b21d218dd65a39f634ff37a27e5
   AFNetworking: 7864c38297c79aaca1500c33288e429c3451fdce
   CYLTabBarController: e7440ad0992edfb8ac14a6c793f43aa636c5cba5
   DZNEmptyDataSet: 9525833b9e68ac21c30253e1d3d7076cc828eaa7
@@ -61,6 +65,6 @@ SPEC CHECKSUMS:
   SDWebImage: 84000f962cbfa70c07f19d2234cbfcf5d779b5dc
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
 
-PODFILE CHECKSUM: 3753574759b356d584d3a9797ae876013aa179c0
+PODFILE CHECKSUM: 1ff3842b79ae5c447e144caa172cbdc975469f86
 
 COCOAPODS: 1.5.2
