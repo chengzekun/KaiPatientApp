@@ -55,7 +55,6 @@
      textField.secureTextEntry = YES;
     [self addSubview:textField];
     self.textField = textField;
-    NSLog(@"inConfig");
     // 小技巧：通过textField上层覆盖一个maskView，可以去掉textField的长按事件
     UIButton *maskView = [UIButton new];
     maskView.backgroundColor = [UIColor whiteColor];
@@ -103,7 +102,7 @@
 #pragma mark - 编辑改变
 - (void)tfEditingChanged:(UITextField *)textField
 {
-    NSLog(@"tfEditingChanged");
+//    NSLog(@"tfEditingChanged");
     if (textField.text.length > self.itemCount) {
         textField.text = [textField.text substringWithRange:NSMakeRange(0, self.itemCount)];
     }

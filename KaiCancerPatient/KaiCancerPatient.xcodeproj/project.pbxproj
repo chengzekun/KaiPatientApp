@@ -47,13 +47,13 @@
 		173B655424A8D2F600B08094 /* KCResetPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 173B655224A8D2F600B08094 /* KCResetPasswordViewController.m */; };
 		173B655524A8D2F600B08094 /* KCResetPasswordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 173B655324A8D2F600B08094 /* KCResetPasswordViewController.xib */; };
 		175A9AA324A2F2840047207C /* CYLTabBarControllerConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 175A9AA224A2F2840047207C /* CYLTabBarControllerConfig.m */; };
+		175C66E225138C9100FAB1EF /* KCResetPhoneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 175C66E025138C9100FAB1EF /* KCResetPhoneViewController.m */; };
+		175C66E325138C9100FAB1EF /* KCResetPhoneViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 175C66E125138C9100FAB1EF /* KCResetPhoneViewController.xib */; };
 		17B1174424D00F55007E2442 /* UIImage+ZK.m in Sources */ = {isa = PBXBuildFile; fileRef = 17B1174324D00F55007E2442 /* UIImage+ZK.m */; };
 		17B2C97024BD589500AD4E46 /* KCIMTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 17B2C96E24BD589500AD4E46 /* KCIMTableViewCell.m */; };
 		17B2C97124BD589500AD4E46 /* KCIMTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17B2C96F24BD589500AD4E46 /* KCIMTableViewCell.xib */; };
 		17B7F6F32504CF0F00EC0E68 /* NetWorkTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 17B7F6F12504CF0E00EC0E68 /* NetWorkTool.m */; };
 		17BBDD2624E2455000ACEC2F /* ZKSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = 17BBDD2524E2455000ACEC2F /* ZKSheet.m */; };
-		17BBDD2A24E24CA800ACEC2F /* KCResetPhoneNumberControllerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 17BBDD2824E24CA800ACEC2F /* KCResetPhoneNumberControllerViewController.m */; };
-		17BBDD2B24E24CA800ACEC2F /* KCResetPhoneNumberControllerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17BBDD2924E24CA800ACEC2F /* KCResetPhoneNumberControllerViewController.xib */; };
 		17BBDD2F24E24E4F00ACEC2F /* KCEditDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 17BBDD2D24E24E4F00ACEC2F /* KCEditDetailViewController.m */; };
 		17C62C5E2497B1DB0072617C /* UIButton+ZK.m in Sources */ = {isa = PBXBuildFile; fileRef = 17C62C5D2497B1DB0072617C /* UIButton+ZK.m */; };
 		17C62C632497B25E0072617C /* ZKButtonModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 17C62C622497B25E0072617C /* ZKButtonModel.m */; };
@@ -65,8 +65,6 @@
 		17CAD007246A92E100D4DB03 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 17CAD006246A92E100D4DB03 /* main.m */; };
 		17CAD011246A92E100D4DB03 /* KaiCancerPatientTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 17CAD010246A92E100D4DB03 /* KaiCancerPatientTests.m */; };
 		17CAD01C246A92E100D4DB03 /* KaiCancerPatientUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 17CAD01B246A92E100D4DB03 /* KaiCancerPatientUITests.m */; };
-		17E933BC24A5075300679F09 /* PreLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 17E933BA24A5075300679F09 /* PreLoginViewController.m */; };
-		17E933BD24A5075300679F09 /* PreLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17E933BB24A5075300679F09 /* PreLoginViewController.xib */; };
 		17FAC6AD24C19586003F2CC2 /* KCUnRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 17FAC6AB24C19586003F2CC2 /* KCUnRegisterViewController.m */; };
 		17FAC6AE24C19586003F2CC2 /* KCUnRegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17FAC6AC24C19586003F2CC2 /* KCUnRegisterViewController.xib */; };
 		FAC4C590E474E62623D433E9 /* libPods-KaiCancerPatient.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A3605FB149D3583A7E809D7D /* libPods-KaiCancerPatient.a */; };
@@ -156,6 +154,9 @@
 		173B655324A8D2F600B08094 /* KCResetPasswordViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KCResetPasswordViewController.xib; sourceTree = "<group>"; };
 		175A9AA124A2F2840047207C /* CYLTabBarControllerConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CYLTabBarControllerConfig.h; sourceTree = "<group>"; };
 		175A9AA224A2F2840047207C /* CYLTabBarControllerConfig.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CYLTabBarControllerConfig.m; sourceTree = "<group>"; };
+		175C66DF25138C9100FAB1EF /* KCResetPhoneViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KCResetPhoneViewController.h; sourceTree = "<group>"; };
+		175C66E025138C9100FAB1EF /* KCResetPhoneViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KCResetPhoneViewController.m; sourceTree = "<group>"; };
+		175C66E125138C9100FAB1EF /* KCResetPhoneViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KCResetPhoneViewController.xib; sourceTree = "<group>"; };
 		17B1174224D00F55007E2442 /* UIImage+ZK.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+ZK.h"; sourceTree = "<group>"; };
 		17B1174324D00F55007E2442 /* UIImage+ZK.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ZK.m"; sourceTree = "<group>"; };
 		17B2C96D24BD589500AD4E46 /* KCIMTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KCIMTableViewCell.h; sourceTree = "<group>"; };
@@ -165,9 +166,6 @@
 		17B7F6F22504CF0F00EC0E68 /* NetWorkTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetWorkTool.h; sourceTree = "<group>"; };
 		17BBDD2424E2455000ACEC2F /* ZKSheet.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZKSheet.h; sourceTree = "<group>"; };
 		17BBDD2524E2455000ACEC2F /* ZKSheet.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZKSheet.m; sourceTree = "<group>"; };
-		17BBDD2724E24CA800ACEC2F /* KCResetPhoneNumberControllerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KCResetPhoneNumberControllerViewController.h; sourceTree = "<group>"; };
-		17BBDD2824E24CA800ACEC2F /* KCResetPhoneNumberControllerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KCResetPhoneNumberControllerViewController.m; sourceTree = "<group>"; };
-		17BBDD2924E24CA800ACEC2F /* KCResetPhoneNumberControllerViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KCResetPhoneNumberControllerViewController.xib; sourceTree = "<group>"; };
 		17BBDD2C24E24E4F00ACEC2F /* KCEditDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KCEditDetailViewController.h; sourceTree = "<group>"; };
 		17BBDD2D24E24E4F00ACEC2F /* KCEditDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KCEditDetailViewController.m; sourceTree = "<group>"; };
 		17C62C5C2497B1DB0072617C /* UIButton+ZK.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIButton+ZK.h"; sourceTree = "<group>"; };
@@ -191,9 +189,6 @@
 		17CAD017246A92E100D4DB03 /* KaiCancerPatientUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KaiCancerPatientUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		17CAD01B246A92E100D4DB03 /* KaiCancerPatientUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KaiCancerPatientUITests.m; sourceTree = "<group>"; };
 		17CAD01D246A92E100D4DB03 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		17E933B924A5075300679F09 /* PreLoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PreLoginViewController.h; sourceTree = "<group>"; };
-		17E933BA24A5075300679F09 /* PreLoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PreLoginViewController.m; sourceTree = "<group>"; };
-		17E933BB24A5075300679F09 /* PreLoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PreLoginViewController.xib; sourceTree = "<group>"; };
 		17FAC6AA24C19586003F2CC2 /* KCUnRegisterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KCUnRegisterViewController.h; sourceTree = "<group>"; };
 		17FAC6AB24C19586003F2CC2 /* KCUnRegisterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KCUnRegisterViewController.m; sourceTree = "<group>"; };
 		17FAC6AC24C19586003F2CC2 /* KCUnRegisterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KCUnRegisterViewController.xib; sourceTree = "<group>"; };
@@ -254,16 +249,10 @@
 		17102C0B24A1ACC600B828F9 /* Account */ = {
 			isa = PBXGroup;
 			children = (
-				17102C1824A1AE7100B828F9 /* KCAccountViewController.h */,
-				17102C1924A1AE7100B828F9 /* KCAccountViewController.m */,
-				17102C1A24A1AE7100B828F9 /* KCAccountViewController.xib */,
-				17BBDD2724E24CA800ACEC2F /* KCResetPhoneNumberControllerViewController.h */,
-				17BBDD2824E24CA800ACEC2F /* KCResetPhoneNumberControllerViewController.m */,
-				17BBDD2924E24CA800ACEC2F /* KCResetPhoneNumberControllerViewController.xib */,
-				17BBDD2C24E24E4F00ACEC2F /* KCEditDetailViewController.h */,
-				17BBDD2D24E24E4F00ACEC2F /* KCEditDetailViewController.m */,
-				1705C16824E91D6900790714 /* KCUserModel.h */,
-				1705C16924E91D6900790714 /* KCUserModel.m */,
+				176B05E32516657800F5F429 /* AccountMain */,
+				175C66DE25138BB800FAB1EF /* ResetPassword&Phone */,
+				175C66DB25137A9800FAB1EF /* Model */,
+				175C66DA25137A5F00FAB1EF /* AccountEdit */,
 			);
 			name = Account;
 			sourceTree = "<group>";
@@ -308,12 +297,10 @@
 		17261B8A24AAD55500DB04E1 /* registerPage */ = {
 			isa = PBXGroup;
 			children = (
+				176B05E225165F8A00F5F429 /* initialPage */,
 				17261B8C24AAD5A300DB04E1 /* KCRegisterViewController.h */,
 				17261B8D24AAD5A300DB04E1 /* KCRegisterViewController.m */,
 				17261B8E24AAD5A300DB04E1 /* KCRegisterViewController.xib */,
-				17FAC6AA24C19586003F2CC2 /* KCUnRegisterViewController.h */,
-				17FAC6AB24C19586003F2CC2 /* KCUnRegisterViewController.m */,
-				17FAC6AC24C19586003F2CC2 /* KCUnRegisterViewController.xib */,
 			);
 			name = registerPage;
 			sourceTree = "<group>";
@@ -321,21 +308,8 @@
 		17261B8B24AAD57200DB04E1 /* LoginPage */ = {
 			isa = PBXGroup;
 			children = (
-				17175FEC24A0EA2F0067EF54 /* KCLoginViewController.h */,
-				17175FED24A0EA2F0067EF54 /* KCLoginViewController.m */,
-				17175FEE24A0EA2F0067EF54 /* KCLoginViewController.xib */,
-				17E933B924A5075300679F09 /* PreLoginViewController.h */,
-				17E933BA24A5075300679F09 /* PreLoginViewController.m */,
-				17E933BB24A5075300679F09 /* PreLoginViewController.xib */,
-				173B654C24A8CD8200B08094 /* passwordInViewController.h */,
-				173B654D24A8CD8200B08094 /* passwordInViewController.m */,
-				173B654E24A8CD8200B08094 /* passwordInViewController.xib */,
-				173B655124A8D2F600B08094 /* KCResetPasswordViewController.h */,
-				173B655224A8D2F600B08094 /* KCResetPasswordViewController.m */,
-				173B655324A8D2F600B08094 /* KCResetPasswordViewController.xib */,
-				17261B9124AB175800DB04E1 /* KCVerifyCodeViewController.h */,
-				17261B9224AB175800DB04E1 /* KCVerifyCodeViewController.m */,
-				17261B9324AB175800DB04E1 /* KCVerifyCodeViewController.xib */,
+				175C66DD2513808400FAB1EF /* phoneLogin */,
+				175C66DC2513806F00FAB1EF /* passwordLogin */,
 			);
 			name = LoginPage;
 			sourceTree = "<group>";
@@ -363,6 +337,116 @@
 			name = KCEduScrollView;
 			sourceTree = "<group>";
 		};
+		175C66DA25137A5F00FAB1EF /* AccountEdit */ = {
+			isa = PBXGroup;
+			children = (
+				17BBDD2C24E24E4F00ACEC2F /* KCEditDetailViewController.h */,
+				17BBDD2D24E24E4F00ACEC2F /* KCEditDetailViewController.m */,
+			);
+			name = AccountEdit;
+			sourceTree = "<group>";
+		};
+		175C66DB25137A9800FAB1EF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1705C16824E91D6900790714 /* KCUserModel.h */,
+				1705C16924E91D6900790714 /* KCUserModel.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		175C66DC2513806F00FAB1EF /* passwordLogin */ = {
+			isa = PBXGroup;
+			children = (
+				173B654C24A8CD8200B08094 /* passwordInViewController.h */,
+				173B654D24A8CD8200B08094 /* passwordInViewController.m */,
+				173B654E24A8CD8200B08094 /* passwordInViewController.xib */,
+			);
+			name = passwordLogin;
+			sourceTree = "<group>";
+		};
+		175C66DD2513808400FAB1EF /* phoneLogin */ = {
+			isa = PBXGroup;
+			children = (
+				17175FEC24A0EA2F0067EF54 /* KCLoginViewController.h */,
+				17175FED24A0EA2F0067EF54 /* KCLoginViewController.m */,
+				17175FEE24A0EA2F0067EF54 /* KCLoginViewController.xib */,
+				17261B9124AB175800DB04E1 /* KCVerifyCodeViewController.h */,
+				17261B9224AB175800DB04E1 /* KCVerifyCodeViewController.m */,
+				17261B9324AB175800DB04E1 /* KCVerifyCodeViewController.xib */,
+			);
+			name = phoneLogin;
+			sourceTree = "<group>";
+		};
+		175C66DE25138BB800FAB1EF /* ResetPassword&Phone */ = {
+			isa = PBXGroup;
+			children = (
+				173B655124A8D2F600B08094 /* KCResetPasswordViewController.h */,
+				173B655224A8D2F600B08094 /* KCResetPasswordViewController.m */,
+				173B655324A8D2F600B08094 /* KCResetPasswordViewController.xib */,
+				175C66DF25138C9100FAB1EF /* KCResetPhoneViewController.h */,
+				175C66E025138C9100FAB1EF /* KCResetPhoneViewController.m */,
+				175C66E125138C9100FAB1EF /* KCResetPhoneViewController.xib */,
+			);
+			name = "ResetPassword&Phone";
+			sourceTree = "<group>";
+		};
+		175C66E4251492FC00FAB1EF /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				17261B8824A9EFD900DB04E1 /* NetWork.plist */,
+				17B7F6F22504CF0F00EC0E68 /* NetWorkTool.h */,
+				17B7F6F12504CF0E00EC0E68 /* NetWorkTool.m */,
+			);
+			name = Network;
+			sourceTree = "<group>";
+		};
+		175C66E52514930A00FAB1EF /* componnent */ = {
+			isa = PBXGroup;
+			children = (
+				175A9AA124A2F2840047207C /* CYLTabBarControllerConfig.h */,
+				175A9AA224A2F2840047207C /* CYLTabBarControllerConfig.m */,
+				17BBDD2424E2455000ACEC2F /* ZKSheet.h */,
+				17BBDD2524E2455000ACEC2F /* ZKSheet.m */,
+				17261B8524A9A8F300DB04E1 /* KCCodeView.h */,
+				17261B8624A9A8F300DB04E1 /* KCCodeView.m */,
+				17261B8224A9A04B00DB04E1 /* KCTextFeildTool.h */,
+				17261B8324A9A04B00DB04E1 /* KCTextFeildTool.m */,
+			);
+			name = componnent;
+			sourceTree = "<group>";
+		};
+		175C66E62514934E00FAB1EF /* Date&EventTool */ = {
+			isa = PBXGroup;
+			children = (
+				17175FDC24A0D81B0067EF54 /* EventCalender.h */,
+				17175FDD24A0D81B0067EF54 /* EventCalender.m */,
+				17175FE224A0DA160067EF54 /* ZKDateTools.h */,
+				17175FE324A0DA160067EF54 /* ZKDateTools.m */,
+			);
+			name = "Date&EventTool";
+			sourceTree = "<group>";
+		};
+		176B05E225165F8A00F5F429 /* initialPage */ = {
+			isa = PBXGroup;
+			children = (
+				17FAC6AA24C19586003F2CC2 /* KCUnRegisterViewController.h */,
+				17FAC6AB24C19586003F2CC2 /* KCUnRegisterViewController.m */,
+				17FAC6AC24C19586003F2CC2 /* KCUnRegisterViewController.xib */,
+			);
+			name = initialPage;
+			sourceTree = "<group>";
+		};
+		176B05E32516657800F5F429 /* AccountMain */ = {
+			isa = PBXGroup;
+			children = (
+				17102C1824A1AE7100B828F9 /* KCAccountViewController.h */,
+				17102C1924A1AE7100B828F9 /* KCAccountViewController.m */,
+				17102C1A24A1AE7100B828F9 /* KCAccountViewController.xib */,
+			);
+			name = AccountMain;
+			sourceTree = "<group>";
+		};
 		17C62C502497A68D0072617C /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -374,12 +458,12 @@
 		17C62C522497A6B90072617C /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				17102C0D24A1AD1200B828F9 /* Education */,
-				17102C0C24A1ACD700B828F9 /* Consult */,
 				17102C0B24A1ACC600B828F9 /* Account */,
+				17102C0C24A1ACD700B828F9 /* Consult */,
+				17102C0D24A1AD1200B828F9 /* Education */,
 				17102C0A24A1ACBB00B828F9 /* IM */,
-				17102C0924A1ACAF00B828F9 /* Main */,
 				17175FEB24A0E9E60067EF54 /* Login */,
+				17102C0924A1ACAF00B828F9 /* Main */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -399,21 +483,9 @@
 		17C62C562497A7340072617C /* Tools */ = {
 			isa = PBXGroup;
 			children = (
-				17175FDC24A0D81B0067EF54 /* EventCalender.h */,
-				17175FDD24A0D81B0067EF54 /* EventCalender.m */,
-				17B7F6F22504CF0F00EC0E68 /* NetWorkTool.h */,
-				17B7F6F12504CF0E00EC0E68 /* NetWorkTool.m */,
-				17175FE224A0DA160067EF54 /* ZKDateTools.h */,
-				17175FE324A0DA160067EF54 /* ZKDateTools.m */,
-				175A9AA124A2F2840047207C /* CYLTabBarControllerConfig.h */,
-				175A9AA224A2F2840047207C /* CYLTabBarControllerConfig.m */,
-				17261B8224A9A04B00DB04E1 /* KCTextFeildTool.h */,
-				17261B8324A9A04B00DB04E1 /* KCTextFeildTool.m */,
-				17261B8524A9A8F300DB04E1 /* KCCodeView.h */,
-				17261B8624A9A8F300DB04E1 /* KCCodeView.m */,
-				17261B8824A9EFD900DB04E1 /* NetWork.plist */,
-				17BBDD2424E2455000ACEC2F /* ZKSheet.h */,
-				17BBDD2524E2455000ACEC2F /* ZKSheet.m */,
+				175C66E62514934E00FAB1EF /* Date&EventTool */,
+				175C66E52514930A00FAB1EF /* componnent */,
+				175C66E4251492FC00FAB1EF /* Network */,
 			);
 			name = Tools;
 			sourceTree = "<group>";
@@ -654,9 +726,7 @@
 				17102C1724A1AE6300B828F9 /* KCIMViewController.xib in Resources */,
 				17261B9024AAD5A300DB04E1 /* KCRegisterViewController.xib in Resources */,
 				17102C1224A1AE5300B828F9 /* KCMainViewController.xib in Resources */,
-				17E933BD24A5075300679F09 /* PreLoginViewController.xib in Resources */,
 				17102C2624A1AE9300B828F9 /* KCEducationViewController.xib in Resources */,
-				17BBDD2B24E24CA800ACEC2F /* KCResetPhoneNumberControllerViewController.xib in Resources */,
 				173B655024A8CD8200B08094 /* passwordInViewController.xib in Resources */,
 				17FAC6AE24C19586003F2CC2 /* KCUnRegisterViewController.xib in Resources */,
 				17175FF024A0EA2F0067EF54 /* KCLoginViewController.xib in Resources */,
@@ -664,6 +734,7 @@
 				17CAD001246A92E100D4DB03 /* Assets.xcassets in Resources */,
 				17261B9524AB175800DB04E1 /* KCVerifyCodeViewController.xib in Resources */,
 				17CACFFF246A92DF00D4DB03 /* Main.storyboard in Resources */,
+				175C66E325138C9100FAB1EF /* KCResetPhoneViewController.xib in Resources */,
 				17B2C97124BD589500AD4E46 /* KCIMTableViewCell.xib in Resources */,
 				17102C1C24A1AE7100B828F9 /* KCAccountViewController.xib in Resources */,
 				172E996B24D2AA1400F899CA /* KCConsultCellTableViewCell.xib in Resources */,
@@ -740,7 +811,6 @@
 				17102C1B24A1AE7100B828F9 /* KCAccountViewController.m in Sources */,
 				17175FD824A0D5AD0067EF54 /* NSString+Hash.m in Sources */,
 				17102C1624A1AE6300B828F9 /* KCIMViewController.m in Sources */,
-				17E933BC24A5075300679F09 /* PreLoginViewController.m in Sources */,
 				17295DD024B6F1000057CC8A /* contentScrollView.m in Sources */,
 				173B655424A8D2F600B08094 /* KCResetPasswordViewController.m in Sources */,
 				17295DCB24B56FBC0057CC8A /* KCConsultViewController.m in Sources */,
@@ -751,6 +821,7 @@
 				17175FE424A0DA160067EF54 /* ZKDateTools.m in Sources */,
 				17C62C662497B2F40072617C /* UIView+Extension.m in Sources */,
 				17175FDE24A0D81B0067EF54 /* EventCalender.m in Sources */,
+				175C66E225138C9100FAB1EF /* KCResetPhoneViewController.m in Sources */,
 				17CACFF6246A92DF00D4DB03 /* AppDelegate.m in Sources */,
 				17C62C5E2497B1DB0072617C /* UIButton+ZK.m in Sources */,
 				17261B9A24AC228000DB04E1 /* KCArticleTableViewCell.m in Sources */,
@@ -772,7 +843,6 @@
 				17BBDD2F24E24E4F00ACEC2F /* KCEditDetailViewController.m in Sources */,
 				17261BA224AC353500DB04E1 /* KCArticleDetailViewController.m in Sources */,
 				17175FEA24A0E3D50067EF54 /* ZKPageViewController.m in Sources */,
-				17BBDD2A24E24CA800ACEC2F /* KCResetPhoneNumberControllerViewController.m in Sources */,
 				17175FE724A0E3830067EF54 /* ZKNavigationViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

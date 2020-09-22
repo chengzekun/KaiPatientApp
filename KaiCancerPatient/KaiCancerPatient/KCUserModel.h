@@ -18,6 +18,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, copy)NSString *firstName;
 @property (nonatomic, copy)NSString *lastName;
 @property (nonatomic, copy)NSString *gender;
+@property (nonatomic, copy)NSString *userId;
 @property (nonatomic, copy)NSMutableDictionary *patientExtra;
 @end
 

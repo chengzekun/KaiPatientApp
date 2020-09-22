@@ -18,7 +18,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self.registerButton setTintColor:ZKThemeColor];
-    [_registerButton setTitle:@"注册并开始" forState:UIControlStateNormal];
+    [_registerButton setTitle:@"开始" forState:UIControlStateNormal];
     [_registerButton.titleLabel setFont:FontPingFangSCS(17)];
     [_registerButton setBackgroundColor:UIColor.whiteColor];
     _registerButton.layer.cornerRadius = 10.0f;

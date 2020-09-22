@@ -8,7 +8,7 @@
 #import "KCAccountViewController.h"
 #import "ZKSheet.h"
 #import "KCResetPasswordViewController.h"
-#import "KCResetPhoneNumberControllerViewController.h"
+#import "KCResetPhoneViewController.h"
 #import "KCEditDetailViewController.h"
 #import "KCUserModel.h"
 @interface KCAccountViewController ()<UIScrollViewDelegate,ZKSheetViewDelegate>
@@ -41,7 +41,7 @@
     self.navigationController.navigationBar.hidden = YES;
 }
 -(void)updateUserInfo{
-    NSDictionary* UserDict = [[NSUserDefaults standardUserDefaults]objectForKey:@"USER_DATA"];
+    NSDictionary* UserDict = [[NSUserDefaults standardUserDefaults]objectForKey:@"UserData"];
     KCUserModel *user = [KCUserModel mj_objectWithKeyValues:UserDict[@"data"]];
 //    NSLog(@"USER_NAME:%@",user.firstName );
 //    [NSString stringWithFormat:@"%@%@",str1,UserDict[@"firstName"]]
@@ -77,14 +77,15 @@
 
 - (void)sheetView:(ZKSheet*)sheetView didSelectedAtIndex:(NSInteger)index{
     if(index == 0){
-        KCResetPasswordViewController* vc = [KCResetPasswordViewController  new];
+        KCResetPhoneViewController* vc = [KCResetPhoneViewController  new];
         [self.navigationController pushViewController:vc animated:YES];
     }else if(index == 1){
-        KCResetPhoneNumberControllerViewController* vc = [KCResetPhoneNumberControllerViewController new];
+        KCResetPhoneViewController* vc = [KCResetPhoneViewController new];
         [self.navigationController pushViewController:vc animated:YES];
     }else if(index == 2){
-        [[NSUserDefaults standardUserDefaults]removeObjectForKey:@"USER_DATA"];
-        [[NSUserDefaults standardUserDefaults]removeObjectForKey:@"ACCESS_TOKEN"];
+        [[NSUserDefaults standardUserDefaults]removeObjectForKey:@"UserData"];
+        [[NSUserDefaults standardUserDefaults]removeObjectForKey:@"encodedAccessToken"];
+        [[NSUserDefaults standardUserDefaults] synchronize];
         [[NSNotificationCenter defaultCenter]postNotificationName:@"CHANGE_ROOT_Vontroller_Login" object:nil];
     }
 }

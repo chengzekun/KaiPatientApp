@@ -8,7 +8,7 @@
 
 #import "KCEducationViewController.h"
 @interface KCEducationViewController ()
-//<UITableViewDelegate,UITableViewDataSource,UIScrollViewDelegate>
+
 @property (weak, nonatomic) IBOutlet UIView *cancerIntroView;
 @property (weak, nonatomic) IBOutlet UIView *careIntroView;
 @property (weak, nonatomic) IBOutlet UIView *recureIntroView;

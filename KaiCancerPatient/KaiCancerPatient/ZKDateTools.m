@@ -52,7 +52,7 @@
     NSDateComponents *comp = [gregorian components:NSCalendarUnitYear|NSCalendarUnitMonth|NSCalendarUnitDay|NSCalendarUnitWeekday fromDate:date];
     NSInteger weekDay = [comp weekday] - 1 ;
     // 得到几号
-    NSInteger day = [comp day];
+//    NSInteger day = [comp day];
     // 计算当前日期和这周的星期一和星期天差的天数
     long firstDiff,lastDiff;
     if (weekDay == -1)

@@ -161,9 +161,11 @@
         config.timeoutIntervalForRequest = 15.0;
         instance = [[self alloc]initWithBaseURL:baseUrl sessionConfiguration:config];
 //        instance.requestSerializer = [AFJSONRequestSerializer serializer];
-        instance.responseSerializer = [AFJSONResponseSerializer serializer];
+//        instance.responseSerializer = [AFJSONResponseSerializer serializer];
         [instance.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
+        [instance.requestSerializer setValue:[[NSUserDefaults standardUserDefaults] objectForKey:@"encodedAccessToken"] forHTTPHeaderField:@"encodedAccessToken"];
 //        [instance.requestSerializer setValue:[[NSUserDefaults standardUserDefaults]objectForKey:@"ACCESS_KEY"] forHTTPHeaderField:@"Authorization"];
+        
         instance.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json",@"text/html",@"text/json",@"text/javascript",@"text/html", nil];
         instance.retryRequestTable = [NSMutableDictionary dictionary];
         AFSecurityPolicy *securityPolicy = [AFSecurityPolicy defaultPolicy];
@@ -330,7 +332,7 @@
 {
     [[NetWorkTool sharedInstance] POST:action parameters:parameter headers:NULL constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
         [images enumerateObjectsUsingBlock:^(UIImage *obj, NSUInteger idx, BOOL * _Nonnull stop) {
-            [formData appendPartWithFileData:UIImageJPEGRepresentation(obj, 1) name:[NSString stringWithFormat:@"%lu",(unsigned long)idx] fileName:[NSString stringWithFormat:@"%lu.jpeg",(unsigned long)idx] mimeType:@"image/jpeg"];
+            [formData appendPartWithFileData:UIImageJPEGRepresentation(obj, 0.8) name:[NSString stringWithFormat:@"%lu",(unsigned long)idx] fileName:[NSString stringWithFormat:@"%lu.jpeg",(unsigned long)idx] mimeType:@"image/jpeg"];
         }];
     } progress:^(NSProgress * _Nonnull uploadProgress) {
         if (progressBlock) {

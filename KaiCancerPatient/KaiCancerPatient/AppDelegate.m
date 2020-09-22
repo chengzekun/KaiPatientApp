@@ -11,7 +11,7 @@
 #import "KCLoginViewController.h"
 #import <UserNotifications/UserNotifications.h>
 #import "KCLoginViewController.h"
-#import "PreLoginViewController.h"
+//#import "PrePageController.h"
 #import "CYLTabBarControllerConfig.h"
 #import "KCUnRegisterViewController.h"
 #import "KCRegisterViewController.h"
@@ -50,8 +50,8 @@
     }
     CYLTabBarControllerConfig *tabBarControllerConfig = [[CYLTabBarControllerConfig alloc] init];
     
-    if([[NSUserDefaults standardUserDefaults] objectForKey:@"USER_DATA"]){
-        NSLog(@"%@",[[NSUserDefaults standardUserDefaults] objectForKey:@"USER_DATA"]);
+    if([[NSUserDefaults standardUserDefaults] objectForKey:@"UserData"]){
+        NSLog(@"%@",[[NSUserDefaults standardUserDefaults] objectForKey:@"UserData"]);
         self.window.rootViewController = tabBarControllerConfig.tabBarController;
     }else{
         KCUnRegisterViewController* LoginVC = [KCUnRegisterViewController new];

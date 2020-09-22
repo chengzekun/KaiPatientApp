@@ -14,8 +14,8 @@
             filePath = "KaiCancerPatient/KCLoginViewController.m"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "81"
-            endingLineNumber = "81"
+            startingLineNumber = "80"
+            endingLineNumber = "80"
             landmarkName = "-verify"
             landmarkType = "7">
          </BreakpointContent>
@@ -23,48 +23,80 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "7F8633B4-41E5-477F-84E8-1EA79DED987F"
+            uuid = "4B7BF698-5BEE-4FBD-BC6C-321C72AD141B"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "KaiCancerPatient/KCAccountViewController.m"
+            filePath = "KaiCancerPatient/KCLoginViewController.m"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "46"
-            endingLineNumber = "46"
-            landmarkName = "-updateUserInfo"
+            startingLineNumber = "78"
+            endingLineNumber = "78"
+            landmarkName = "-verify"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "DB975EEA-5A92-4278-9063-2875E09A16BD"
+            uuid = "8796B4CB-3517-48A0-BEC8-098F216ACB55"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "KaiCancerPatient/passwordInViewController.m"
+            filePath = "KaiCancerPatient/KCVerifyCodeViewController.m"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "68"
-            endingLineNumber = "68"
-            landmarkName = "-LoginWithPassword:"
+            startingLineNumber = "160"
+            endingLineNumber = "160"
+            landmarkName = "-login"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "FA06A030-4C3C-4E11-94C5-87999216A214"
+            uuid = "30905C1C-3C80-4A6D-A399-E7F4D4EF7D45"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "KaiCancerPatient/passwordInViewController.m"
+            filePath = "KaiCancerPatient/KCVerifyCodeViewController.m"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "64"
-            endingLineNumber = "64"
-            landmarkName = "-LoginWithPassword:"
+            startingLineNumber = "179"
+            endingLineNumber = "179"
+            landmarkName = "-login"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "6A86B6B7-9544-45A3-A4C0-950513D472F6"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "KaiCancerPatient/KCRegisterViewController.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "325"
+            endingLineNumber = "325"
+            landmarkName = "-FinishRegister"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F7234D97-F146-47B4-BC4F-F0A0FB90F44E"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "KaiCancerPatient/KCRegisterViewController.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "240"
+            endingLineNumber = "240"
+            landmarkName = "-FinishRegister"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

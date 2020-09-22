@@ -7,7 +7,6 @@
 //
 
 #import "KCLoginViewController.h"
-#import "PreLoginViewController.h"
 #import "passwordInViewController.h"
 #import "KCVerifyCodeViewController.h"
 @interface KCLoginViewController () <UITextFieldDelegate>
@@ -27,7 +26,7 @@
     self.verifyCodeButton.layer.cornerRadius = 10;
     self.phoneNumberTextFeild.borderStyle = UITextBorderStyleNone;
     self.phoneNumberTextFeild.delegate = self;
-    [self.phoneNumberTextFeild setText:[[NSUserDefaults standardUserDefaults]objectForKey:@"PHONE"]];
+    
     [self.verifyCodeButton addTarget:self action:@selector(verify) forControlEvents:UIControlEventTouchUpInside];
     UIBarButtonItem *lbtnItem = [[UIBarButtonItem alloc] initWithTitle:@"返回" style:UIBarButtonItemStylePlain target:self action:@selector(goBack)];
     self.navigationItem.leftBarButtonItem = lbtnItem;
@@ -63,32 +62,31 @@
 }
 
 -(void)verify{
-    // && self.phoneNumberTextFeild.text.length == 11)  self.phoneNumberTextFeild.text
-    if(self.phoneNumberTextFeild.text) {
+    if(self.phoneNumberTextFeild.text && self.phoneNumberTextFeild.text.length == 11) {
         self.wrongCodeLabel.hidden = YES;
         AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
         manager.requestSerializer.timeoutInterval = 15;
         manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json",@"text/html",@"text/json",@"text/javascript", nil];
         [manager.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
         [manager GET:@"http://sfp.dev.hins.work/api/v1/sms"  parameters:@{
-            @"phone":@"13693405365"
+            @"phone":self.phoneNumberTextFeild.text
         } headers:nil progress:^(NSProgress * _Nonnull downloadProgress) {
         } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
             KCVerifyCodeViewController* vc = [KCVerifyCodeViewController new];
-            vc.PhoneNumber = @"13693405365";
+            vc.PhoneNumber = self.phoneNumberTextFeild.text;
             vc.verifyCode = responseObject[@"data"];
-            [self.navigationController pushViewController:vc animated:YES];
             NSLog(@"%@",responseObject);
+            [self.navigationController pushViewController:vc animated:YES];
         } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
             [self showAlert:error];
         }];
         
     }else{
         self.wrongCodeLabel.hidden = NO;
-        
     }
     return;
 }
+
 -(void)showAlert:(NSError*)error{
     UIAlertController* alert = [UIAlertController alertControllerWithTitle:@"ERROR"
                                                                    message:error.localizedDescription

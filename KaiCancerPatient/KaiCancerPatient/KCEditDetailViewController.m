@@ -17,6 +17,9 @@
 @property (strong,nonatomic)KCUserModel* userModel;
 @property (strong,nonatomic)NSArray* diseasesArray;
 @property (strong,nonatomic)UITextField* text;
+@property (copy,nonatomic)NSString* diseaseId;
+@property (copy,nonatomic)NSString* medicalRecordNumber;
+
 @end
 @implementation KCEditDetailViewController
 - (void)viewDidLoad {
@@ -34,13 +37,14 @@
     self.image.userInteractionEnabled = YES;
     self.image.layer.cornerRadius =self.image.frame.size.width/2;
     self.image.layer.masksToBounds = YES;
+    
     UITapGestureRecognizer *imageTouch = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(chooseImage)];
     [self.image addGestureRecognizer:imageTouch];
     //nameText
     self.text = [[UITextField alloc]init];
     //设置用户的模型
-    NSDictionary* UserDict = [[NSUserDefaults standardUserDefaults]objectForKey:@"USER_DATA"];
-    self.userModel = [KCUserModel mj_objectWithKeyValues:UserDict[@"data"]];
+    NSDictionary* UserDict = [[NSUserDefaults standardUserDefaults]objectForKey:@"UserData"];
+    self.userModel = [KCUserModel mj_objectWithKeyValues:UserDict];
     //设置时间picker
     self.picker = [[UIDatePicker alloc] init];
     self.picker.locale = [NSLocale localeWithLocaleIdentifier:@"zh"];
@@ -53,51 +57,87 @@
     //设置其他picker
     [self.view addGestureRecognizer:tapGestureRecognizer];
     self.diseasesArray = [[NSArray alloc] init];
+    self.diseaseId = self.userModel.patientExtra[@"disease"][@"id"];
+    self.medicalRecordNumber = self.userModel.patientExtra[@"medicalRecordNumber"];
     [self getInfo];
 }
+
 -(void)keyboardHide:(UITapGestureRecognizer*)tap{
     [self.text resignFirstResponder];
 }
 //获得疾病的列表
 -(void)getInfo{
-    
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
-    
     [manager GET:@"http://sfp.dev.hins.work/api/v1/diseases" parameters:nil headers:nil
         progress:^(NSProgress * _Nonnull uploadProgress) {
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         NSMutableDictionary* dic = (NSMutableDictionary*)responseObject;
         NSLog(@"%@",dic);
         self.diseasesArray = dic[@"data"];
-        
         NSLog(@"%@",self.diseasesArray[0][@"name"]);
         [self.tableView reloadData];
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         NSLog(@"%@",error.description);
     }];
 }
+
 //懒加载定义
 -(UITableView*)tableView{
     if(_tableView == nil){
-         _tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStyleGrouped];
-         _tableView.backgroundColor = rgba(0, 0, 0,0);
-         _tableView.delegate = self;
-         _tableView.dataSource = self;
+        _tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStyleGrouped];
+        _tableView.backgroundColor = rgba(0, 0, 0,0);
+        _tableView.delegate = self;
+        _tableView.dataSource = self;
         _tableView.frame = self.view.frame;
-         _tableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
-         if(is_iPhone_X){
-             _tableView.contentInset = UIEdgeInsetsMake(0, 0, 96 + 69, 0);
-         }else{
-             _tableView.contentInset = UIEdgeInsetsMake(0, 0, 120, 0);
-         }
-     }
-     return _tableView;
+        _tableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
+        if(is_iPhone_X){
+            _tableView.contentInset = UIEdgeInsetsMake(0, 0, 165, 0);
+        }else{
+            _tableView.contentInset = UIEdgeInsetsMake(0, 0, 100, 0);
+        }
+    }
+    return _tableView;
 }
 //页面离开和完成
 -(void)finishEdit{
-    
+    if(self.image.image != nil){
+        AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+        [manager POST:@"http://sfp.dev.hins.work/api/v1/files"
+           parameters:nil
+              headers:@{
+                  @"encodedAccessToken":[[NSUserDefaults standardUserDefaults] objectForKey:@"encodedAccessToken"]
+              }
+            constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
+            [formData appendPartWithFileData:UIImageJPEGRepresentation(self.image.image, 0.8)
+                                        name:@"files"
+                                    fileName:@"123.jpeg" mimeType:@"image/jpeg"];
+        } progress:^(NSProgress * _Nonnull uploadProgress) {
+        } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+            NSLog(@"%@",responseObject);
+            NSMutableDictionary* UserDict = [[NSUserDefaults standardUserDefaults]objectForKey:@"UserData"];
+            UserDict[@"avatar"] = responseObject[@"data"][@"path"];
+            
+            [manager PUT:@"http://sfp.dev.hins.work/api/v1/users/profile" parameters:@{
+                @"lastname":self.text.text?self.text.text:[NSString stringWithFormat:@"%@%@",self.userModel.lastName,self.userModel.firstName],
+                @"avatar":responseObject[@"data"][@"path"],
+                @"patientExtra":@{
+                        @"birthday":[self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:3 inSection:0]].detailTextLabel.text,
+                        @"diseaseId":self.diseaseId,
+                        @"medicalRecordNumber": self.medicalRecordNumber
+                }
+            } headers:@{
+                @"Content-Type":@"application/json",
+                @"encodedAccessToken":[[NSUserDefaults standardUserDefaults] objectForKey:@"encodedAccessToken"]}
+                 success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable res) {
+                    NSLog(@"%@",res);
+                
+                } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+                }];
+        } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+            NSLog(@"%@",error.localizedDescription);
+        }];
+    }
 }
-
 -(void)quit{
     [self.navigationController popViewControllerAnimated:YES];
 }
@@ -110,6 +150,7 @@
     imagePickerController.allowsEditing = YES;
     [self presentViewController:imagePickerController animated:YES completion:nil];
 }
+//完成选择图片并处理
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info {
     UIImage *image = [info objectForKey:@"UIImagePickerControllerEditedImage"];
     self.image.image = image;
@@ -123,13 +164,12 @@
 //DatePicker时间选择并更新参数
 - (void)dateChange:(UIDatePicker *)datePicker {
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-    formatter.dateFormat = @"yyyy年MM月dd日";
+    formatter.dateFormat = @"yyyy-MM-dd";
     NSString *dateStr = [formatter  stringFromDate:datePicker.date];
     [[self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:3 inSection:0]].detailTextLabel setText:dateStr];
 }
 //tableView delegate & DataSource
-- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
-{
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
     return 60;
 }
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
@@ -142,8 +182,8 @@
     [titile setFont:FontPingFangSCS(34)];
     [view addSubview:titile];
     [titile mas_makeConstraints:^(MASConstraintMaker *make) {
-       make.top.equalTo(view).offset(10);
-       make.left.equalTo(view).offset(16);
+        make.top.equalTo(view).offset(10);
+        make.left.equalTo(view).offset(16);
     }];
     return view ;
 }
@@ -163,32 +203,33 @@
     return 7;
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-     if(indexPath.row == 2){ //性别
-         NSArray *rows = @[@[@"男", @"女"]];
-         NSArray *initialSelection = @[@0];
-         [ActionSheetMultipleStringPicker showPickerWithTitle:@"选择性别"
-                                                    rows:rows
-                                        initialSelection:initialSelection
-                                               doneBlock:^(ActionSheetMultipleStringPicker *picker,
-                                                NSArray *selectedIndexes,
-                                                NSArray *selectedValues) {
-                                                    NSLog(@"%@", selectedIndexes);
-                                                    NSLog(@"%@", [selectedValues componentsJoinedByString:@", "]);
-                                                    [[tableView cellForRowAtIndexPath:indexPath].detailTextLabel setText:[selectedValues componentsJoinedByString:@""]];
-                                                }
-                                            cancelBlock:^(ActionSheetMultipleStringPicker *picker) {
-                                                NSLog(@"picker = %@", picker);} origin:self.view];
+    if(indexPath.row == 2){ //性别
+        NSArray *rows = @[@[@"男", @"女"]];
+        NSArray *initialSelection = @[@0];
+        [ActionSheetMultipleStringPicker showPickerWithTitle:@"选择性别"
+                                                        rows:rows
+                                            initialSelection:initialSelection
+                                                   doneBlock:^(ActionSheetMultipleStringPicker *picker,
+                                                               NSArray *selectedIndexes,
+                                                               NSArray *selectedValues) {
+            NSLog(@"%@", selectedIndexes);
+            NSLog(@"%@", [selectedValues componentsJoinedByString:@", "]);
+            [[tableView cellForRowAtIndexPath:indexPath].detailTextLabel setText:[selectedValues componentsJoinedByString:@""]];
+        }
+                                                 cancelBlock:^(ActionSheetMultipleStringPicker *picker) {
+            NSLog(@"picker = %@", picker);} origin:self.view];
     }else if(indexPath.row == 5){//病案号
         UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"输入病案号" message:@"" preferredStyle:UIAlertControllerStyleAlert];
         [alertController addAction:[UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleDefault handler:nil]];
         [alertController addAction:[UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+            UITextField *TextField = alertController.textFields.firstObject;
+            [[tableView cellForRowAtIndexPath:indexPath].detailTextLabel setText:TextField.text];
+            self.medicalRecordNumber = TextField.text;
         }]];
-
         //定义第一个输入框；
         [alertController addTextFieldWithConfigurationHandler:^(UITextField * _Nonnull textField) {
             textField.placeholder = @"病案号";
-            textField.keyboardType = UIKeyboardTypeDecimalPad;
-//            textField.text = [NSString stringWithFormat:@"%.2lf",[goods.taxPremium doubleValue]];
+            textField.keyboardType = UIKeyboardTypeNumberPad;
         }];
         [self presentViewController:alertController animated:true completion:nil];
     }else if(indexPath.row == 6){//病种
@@ -201,14 +242,14 @@
                                                         rows:@[array]
                                             initialSelection:initialSelection
                                                    doneBlock:^(ActionSheetMultipleStringPicker *picker,
-                                                    NSArray *selectedIndexes,
-                                                    NSArray *selectedValues) {
-                                                        NSLog(@"%@", selectedIndexes);
-                                                        NSLog(@"%@", [selectedValues componentsJoinedByString:@", "]);
-                                                        [[tableView cellForRowAtIndexPath:indexPath].detailTextLabel setText:[selectedValues componentsJoinedByString:@""]];
-                                                    }
-                                                cancelBlock:^(ActionSheetMultipleStringPicker *picker) {
-                                                    NSLog(@"picker = %@", picker);} origin:self.view];
+                                                               NSArray *selectedIndexes,
+                                                               NSArray *selectedValues) {
+            int index = [selectedIndexes[0] intValue];
+            self.diseaseId = (self.diseasesArray[index])[@"id"];
+            NSLog(@"%@",self.diseaseId);
+            [[tableView cellForRowAtIndexPath:indexPath].detailTextLabel setText:[selectedValues componentsJoinedByString:@","]];
+        }cancelBlock:^(ActionSheetMultipleStringPicker *picker) {
+            NSLog(@"picker = %@", picker);} origin:self.view];
     }
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -220,22 +261,22 @@
         }
         [cell addSubview:self.image];
         [self.image mas_makeConstraints:^(MASConstraintMaker *make) {
-             make.centerX.equalTo(cell.mas_centerX);
+            make.centerX.equalTo(cell.mas_centerX);
             make.top.equalTo(cell.mas_top).offset(20);
-             make.width.mas_equalTo(120);
-             make.height.mas_equalTo(120);
-         }];
+            make.width.mas_equalTo(120);
+            make.height.mas_equalTo(120);
+        }];
     }else if(indexPath.row == 1){
         if(cell == nil){
             cell = [UITableViewCell new];
         }
-        
         [self.text setText:[NSString stringWithFormat:@"%@%@",self.userModel.lastName,self.userModel.firstName]];
         [self.text setFont:FontPingFangSCR(23)];
         self.text.borderStyle = UITextBorderStyleNone;
         [cell addSubview:self.text];
         [self.text mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.equalTo(cell.mas_left).offset(16);
+            make.right.equalTo(cell.mas_right).offset(-16);
             make.centerY.equalTo(cell.mas_centerY);
         }];
     }else if(indexPath.row == 2){
@@ -249,7 +290,11 @@
             cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:id];
         }
         cell.textLabel.text = @"生日年月";
-        cell.detailTextLabel.text = @"1990年13月47日";
+        if(self.userModel.patientExtra[@"birthday"]){
+            cell.detailTextLabel.text = self.userModel.patientExtra[@"birthday"];
+        }else{
+            cell.detailTextLabel.text = @"2000-00-00";
+        }
         [cell.detailTextLabel setTextColor:UIColor.systemBlueColor];
     }else if(indexPath.row == 4){
         if(cell == nil){
